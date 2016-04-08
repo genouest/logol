@@ -13,5 +13,3 @@ before_install:
 
 # command to run tests
 script: ant dist_swi
-#after_success:
-#  - coveralls
