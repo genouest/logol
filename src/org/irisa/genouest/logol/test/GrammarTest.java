@@ -2355,7 +2355,7 @@ public class GrammarTest {
 
 		// Skip test in Travis
 		try {
-		 	is_travis = System.getenv("TRAVIS");
+		 	String is_travis = System.getenv("TRAVIS");
 		 	assumeTrue(is_travis==null);
 			return;
 		}
