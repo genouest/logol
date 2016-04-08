@@ -2352,6 +2352,18 @@ public class GrammarTest {
 
    	 @Test
    	 public void testRubyCassiopee() {
+
+		// Skip test in Travis
+		try {
+		 	is_travis = System.getenv('TRAVIS');
+		 	assumeTrue(is_travis==null);
+			return;
+		}
+		except(Exception e) {
+			assumeFalse(1==1);
+			return;
+		}
+
    		 init();
 
  		Vector<String[]> result = new Vector<String[]>();
@@ -2364,19 +2376,14 @@ public class GrammarTest {
    			try {
    				Logol.main(args);
    			} catch (ConfigurationException e) {
-				assumeTrue(1==0); // Skip test, could be a ruby/ruby-cassiopee version issue, cassiopee C lib is recommended anyway
    				fail(e.getMessage());
    			} catch (IOException e) {
-				assumeTrue(1==0); // Skip test, could be a ruby/ruby-cassiopee version issue, cassiopee C lib is recommended anyway
    				fail(e.getMessage());
    			}  catch (InterruptedException e) {
-				assumeTrue(1==0); // Skip test, could be a ruby/ruby-cassiopee version issue, cassiopee C lib is recommended anyway
    				fail(e.getMessage());
    			} catch (ParseException e) {
-				assumeTrue(1==0); // Skip test, could be a ruby/ruby-cassiopee version issue, cassiopee C lib is recommended anyway
    				fail(e.getMessage());
    			} catch (GrammarException e) {
-				assumeTrue(1==0); // Skip test, could be a ruby/ruby-cassiopee version issue, cassiopee C lib is recommended anyway
    				fail(e.getMessage());
    			}
 
