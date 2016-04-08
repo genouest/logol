@@ -2357,7 +2357,6 @@ public class GrammarTest {
 		try {
 		 	String is_travis = System.getenv("TRAVIS");
 		 	assumeTrue(is_travis==null);
-			return;
 		}
 		catch(Exception e) {
 			assumeTrue(1==0);
