@@ -1,0 +1,5 @@
+def:{
+}
+mod1()==>"aaa","acgt":{_R1},!external(test,[5,3],[0])
+
+mod1()==*>SEQ1

@@ -1,0 +1,1722 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<magicdraw>
+<model humanType="Model" icon="uml_specifications_files/icon_1357197335.png" name="Data" refid="eee_1045467100313_135436_1">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_12_1_f00036a_1173877897794_142091_98"/>
+<usecasepackage humanType="Use Case Package" icon="uml_specifications_files/icon_1215757902.png" name="Actors" refid="_12_1_f00036a_1174037925192_29828_351">
+<ownedElement>
+<usage humanType="Usage" icon="uml_specifications_files/icon_1698892272.png" isRelationship="true" name="" refid="_15_5_bee0300_1232725995389_268878_2450"/>
+<actor humanType="Actor" icon="uml_specifications_files/icon_1452833868.png" name="Command-Line" refid="_15_5_bee0300_1232624104079_584362_846">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_bee0300_1232624183035_722637_864"/>
+</ownedElement>
+</actor>
+<actor humanType="Actor" icon="uml_specifications_files/icon_1452833868.png" name="JobRequester" refid="_15_5_bee0300_1232626008188_98139_1548">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_bee0300_1232626032486_283476_1566"/>
+<constraint humanType="Constraint" icon="uml_specifications_files/icon_1596584075.png" name="" refid="_15_5_bee0300_1232626039409_123923_1567">
+<ownedElement>
+<opaqueexpression humanType="Opaque Expression" icon="uml_specifications_files/icon_1343526438.png" name="" refid="_15_5_bee0300_1232626039409_238217_1568" text=""/>
+</ownedElement>
+</constraint>
+</ownedElement>
+</actor>
+<actor humanType="Actor" icon="uml_specifications_files/icon_1452833868.png" name="LogolAnalyser" refid="_15_5_bee0300_1232624189739_715811_866">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_bee0300_1232624243616_602404_884"/>
+</ownedElement>
+</actor>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_12_1_f00036a_1174037966646_90146_354"/>
+<association humanType="Association" icon="uml_specifications_files/icon_230392343.png" isRelationship="true" name="" refid="_15_5_bee0300_1232720909504_898186_1307">
+<ownedElement>
+<property humanType="Property" icon="uml_specifications_files/icon_1097584428.png" name="" refid="_15_5_bee0300_1232720909504_951794_1308"/>
+<property humanType="Property" icon="uml_specifications_files/icon_1097584428.png" name="" refid="_15_5_bee0300_1232720909504_726216_1309"/>
+</ownedElement>
+</association>
+</ownedElement>
+</usecasepackage>
+<usecasepackage humanType="Use Case Package" icon="uml_specifications_files/icon_1215757902.png" name="High-Level Use Cases" refid="_12_1_f00036a_1174037935224_720027_352">
+<ownedElement>
+<usage humanType="Usage" icon="uml_specifications_files/icon_1698892272.png" isRelationship="true" name="" refid="_15_5_bee0300_1232721885116_604999_1390"/>
+<usage humanType="Usage" icon="uml_specifications_files/icon_1698892272.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233239857301_924973_5990"/>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_2047187157.png" name="JobManager" refid="_15_5_bee0300_1232626004016_333525_1527">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_bee0300_1232626004016_771987_1539">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437165_893582_743">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437165_823022_744" text="22/01/09 13:06"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437165_269230_745">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437166_904191_746" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437166_214042_747">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437166_573510_748" text="22/01/09 13:06"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_2047187157.png" name="JobSubmission" refid="_15_5_bee0300_1232624088047_640722_825">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233239891191_61874_5991"/>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_bee0300_1232624088047_802608_837">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437152_483147_709">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437152_992819_710" text="22/01/09 12:34"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437152_525672_711">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437152_501763_712" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437153_744276_713">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437153_50490_714" text="22/01/09 12:34"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+<usecase humanType="UseCase" icon="uml_specifications_files/icon_882392275.png" name="grammarError" refid="_15_5_bee0300_1232720773570_24217_819">
+<ownedElement>
+<extend humanType="Extend" icon="uml_specifications_files/icon_275128059.png" isRelationship="true" name="" refid="_15_5_bee0300_1232720773570_50824_821"/>
+</ownedElement>
+</usecase>
+<requirementsusecase humanType="Requirements Use Case" icon="uml_specifications_files/icon_882392275.png" name="JobManager" refid="_15_5_bee0300_1232626091380_440036_1570">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_bee0300_1232626298299_594580_1710">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437167_400580_749">
+<ownedElement>
+<instancevalue humanType="Instance Value" icon="uml_specifications_files/icon_2030427525.png" name="" refid="_16_0_1_bee0300_1287434437167_871898_750" text="External Inquiry"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</requirementsusecase>
+<usecase humanType="UseCase" icon="uml_specifications_files/icon_882392275.png" name="LocalJobManager" refid="_15_5_bee0300_1232626120648_147347_1635">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_bee0300_1232626173213_655627_1706"/>
+<generalization humanType="Generalization" icon="uml_specifications_files/icon_1658197374.png" isRelationship="true" refid="_15_5_bee0300_1232720851265_653947_873"/>
+</ownedElement>
+</usecase>
+<usecase humanType="UseCase" icon="uml_specifications_files/icon_882392275.png" name="SGEJobManager" refid="_15_5_bee0300_1232626131695_94092_1671">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_bee0300_1232626214122_13729_1707"/>
+<generalization humanType="Generalization" icon="uml_specifications_files/icon_1658197374.png" isRelationship="true" refid="_15_5_bee0300_1232720853984_813932_898"/>
+<constraint humanType="Constraint" icon="uml_specifications_files/icon_1596584075.png" name="DRMAA Java" refid="_15_5_bee0300_1232626217966_344618_1708">
+<ownedElement>
+<opaqueexpression humanType="Opaque Expression" icon="uml_specifications_files/icon_1343526438.png" name="" refid="_15_5_bee0300_1232626217966_349945_1709" text="requires DRMAA java implementation on DRM system"/>
+</ownedElement>
+</constraint>
+</ownedElement>
+</usecase>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_12_1_f00036a_1174037976239_589255_355"/>
+<component humanType="Component" icon="uml_specifications_files/icon_1171528831.png" name="suffix search" refid="_15_5_bee0300_1232627508556_226079_2144">
+<ownedElement>
+<usecase humanType="UseCase" icon="uml_specifications_files/icon_882392275.png" name="preanalyse" refid="_15_5_bee0300_1232624734704_714479_1104"/>
+</ownedElement>
+</component>
+<component humanType="Component" icon="uml_specifications_files/icon_1736295570.png" name="SuffixTool" refid="_15_5_bee0300_1232627780462_998870_2174">
+<ownedElement>
+<usecase humanType="UseCase" icon="uml_specifications_files/icon_882392275.png" name="suffix search" refid="_15_5_bee0300_1232624797400_747350_1176">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_bee0300_1232624843437_721122_1203"/>
+</ownedElement>
+</usecase>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_bee0300_1232627780462_92139_2175"/>
+</ownedElement>
+</component>
+<component humanType="Component" icon="uml_specifications_files/icon_1736295570.png" name="System1" refid="_15_5_bee0300_1232627480554_166013_2114">
+<ownedElement>
+<usage humanType="Usage" icon="uml_specifications_files/icon_1698892272.png" isRelationship="true" name="" refid="_15_5_bee0300_1232725960359_56814_2449"/>
+<usage humanType="Usage" icon="uml_specifications_files/icon_1698892272.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233231745520_780537_2159"/>
+<requirementsusecase humanType="Requirements Use Case" icon="uml_specifications_files/icon_882392275.png" name="grammarParser" refid="_15_5_bee0300_1232624855845_528343_1205">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_bee0300_1232624913803_581197_1216"/>
+<extensionpoint humanType="Extension Point" icon="uml_specifications_files/icon_1143599432.png" name="ModelParser" refid="_15_5_bee0300_1232624927976_695253_1217"/>
+<include humanType="Include" icon="uml_specifications_files/icon_761028846.png" isRelationship="true" name="" refid="_15_5_bee0300_1232721423440_643158_1359"/>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_bee0300_1232721541544_182865_1360">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437164_777122_739">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437164_78245_740" text="If input is a model, convert the model to a logol grammar"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437164_936811_741">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437164_193895_742" text="parse grammar&#10;first analysis&#10;preanalyse for postponed variable&#10;generate prolog content"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+<activity humanType="Activity" icon="uml_specifications_files/icon_2066407829.png" name="GrammarParser" refid="_15_5_1_bee0300_1233232417285_857399_2427">
+<ownedElement>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233232459270_819184_2472">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233232459270_93445_2473" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233232478816_804918_2511">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233232478832_945729_2512" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233232495520_900946_2544">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233232495520_91770_2545" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233232509676_679968_2576">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233232509676_48455_2577" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233232529285_792468_2619">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233232529285_498082_2620" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236029691_917340_3727">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233236029691_472063_3728" text="1"/>
+</ownedElement>
+</controlflow>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_1967594014.png" name="GrammarParser" refid="_15_5_1_bee0300_1233232417285_979529_2425">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_1_bee0300_1233232417285_227264_2438">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437154_265271_715">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437154_399204_716" text="29/01/09 13:33"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437154_312124_717">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437155_47904_718" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437156_97283_719">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437156_711592_720" text="29/01/09 13:33"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+<initialnode humanType="Initial Node" icon="uml_specifications_files/icon_1837886895.png" name="" refid="_15_5_1_bee0300_1233232432598_629556_2447"/>
+<statemachine humanType="State Machine" icon="uml_specifications_files/icon_1829932208.png" name="secondStepParsing" refid="_15_5_1_bee0300_1233232753426_274735_2639">
+<ownedElement>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_198127747.png" name="secondStepParsing" refid="_15_5_1_bee0300_1233232753426_988771_2637">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_1_bee0300_1233232753426_171301_2651">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437173_815951_765">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437174_840141_766" text="29/01/09 13:39"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437174_735482_767">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437174_771265_768" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437174_217729_769">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437174_483151_770" text="29/01/09 13:39"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+<region humanType="Region" icon="uml_specifications_files/icon_931160979.png" name="" refid="_15_5_1_bee0300_1233232753426_812675_2640">
+<ownedElement>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233232830832_409864_2705"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233233167895_381229_2735"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233233304988_373552_2765"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233233335332_91651_2806"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236008957_685469_3694"/>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="Generate prolog" refid="_15_5_1_bee0300_1233232830785_865256_2703">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233233109441_223516_2731"/>
+</ownedElement>
+</state>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="preanalyse" refid="_15_5_1_bee0300_1233233167879_952790_2733">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233233259207_654831_2761"/>
+</ownedElement>
+</state>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="Store info" refid="_15_5_1_bee0300_1233233304973_197118_2763">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233233326051_871899_2791"/>
+</ownedElement>
+</state>
+<finalstate humanType="Final State" icon="uml_specifications_files/icon_1492287381.png" name="" refid="_15_5_1_bee0300_1233236006098_621466_3681"/>
+<pseudostate humanType="Pseudo State" icon="uml_specifications_files/icon_1837886895.png" name="" refid="_15_5_1_bee0300_1233232828254_62763_2690"/>
+<pseudostate humanType="Pseudo State" icon="uml_specifications_files/icon_859876555.png" name="" refid="_15_5_1_bee0300_1233233329473_123365_2793"/>
+</ownedElement>
+</region>
+</ownedElement>
+<ownedDiagram>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_198127747.png" name="secondStepParsing" refid="_15_5_1_bee0300_1233232753426_988771_2637">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_1_bee0300_1233232753426_171301_2651">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437173_815951_765">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437174_840141_766" text="29/01/09 13:39"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437174_735482_767">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437174_771265_768" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437174_217729_769">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437174_483151_770" text="29/01/09 13:39"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+</ownedDiagram>
+</statemachine>
+<statemachine humanType="State Machine" icon="uml_specifications_files/icon_1829932208.png" name="ThirdStepParsing" refid="_15_5_1_bee0300_1233232797457_274610_2666">
+<ownedElement>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_198127747.png" name="ThirdStepParsing" refid="_15_5_1_bee0300_1233232797457_441609_2664">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_1_bee0300_1233232797473_396711_2678">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437168_207745_751">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437168_528190_752" text="29/01/09 13:39"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437168_751042_753">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437168_332897_754" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437169_212040_755">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437169_828100_756" text="29/01/09 13:39"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+<signalevent humanType="Signal Event" icon="uml_specifications_files/icon_1025631718.png" name="" refid="_15_5_1_bee0300_1233234661332_832577_3201"/>
+<signalevent humanType="Signal Event" icon="uml_specifications_files/icon_1025631718.png" name="" refid="_15_5_1_bee0300_1233234844863_761833_3267"/>
+<signalevent humanType="Signal Event" icon="uml_specifications_files/icon_1025631718.png" name="" refid="_15_5_1_bee0300_1233235365129_266015_3393"/>
+<signalevent humanType="Signal Event" icon="uml_specifications_files/icon_1025631718.png" name="" refid="_15_5_1_bee0300_1233235409785_750990_3470"/>
+<region humanType="Region" icon="uml_specifications_files/icon_931160979.png" name="" refid="_15_5_1_bee0300_1233232797457_221977_2667">
+<ownedElement>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233234143238_225406_3054">
+<ownedElement>
+<trigger humanType="Trigger" icon="uml_specifications_files/icon_1609388181.png" name="" refid="_15_5_1_bee0300_1233234661332_608240_3202"/>
+</ownedElement>
+</transition>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233234281410_119031_3082"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233234398426_981477_3130"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233234628520_514683_3161"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233234664551_97760_3204"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233234667645_838827_3220"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233234840488_530192_3251">
+<ownedElement>
+<trigger humanType="Trigger" icon="uml_specifications_files/icon_1609388181.png" name="" refid="_15_5_1_bee0300_1233234844863_366377_3268"/>
+</ownedElement>
+</transition>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233234867113_724576_3270"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233234942426_754029_3286"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233235350238_438164_3345">
+<ownedElement>
+<trigger humanType="Trigger" icon="uml_specifications_files/icon_1609388181.png" name="" refid="_15_5_1_bee0300_1233235365129_269964_3394"/>
+</ownedElement>
+</transition>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233235354957_731623_3361"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233235358801_912520_3377"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233235393816_546956_3409"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233235398363_898896_3427">
+<ownedElement>
+<trigger humanType="Trigger" icon="uml_specifications_files/icon_1609388181.png" name="" refid="_15_5_1_bee0300_1233235409785_777230_3471"/>
+</ownedElement>
+</transition>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233235402160_621727_3454"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233235417801_421292_3473"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233235816363_188917_3493"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233235826160_670800_3520"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233235914301_337148_3538"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233235918035_215957_3565"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233235953691_504319_3583"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233235978457_50949_3612"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236077223_191739_3815"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236107379_215885_3858"/>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="" refid="_15_5_1_bee0300_1233234628520_16599_3159"/>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="" refid="_15_5_1_bee0300_1233235978441_161870_3610"/>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="checkPostponedVariable" refid="_15_5_1_bee0300_1233234678488_208723_3236">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233234831332_778566_3249"/>
+</ownedElement>
+</state>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="Compute model cost" refid="_15_5_1_bee0300_1233235953676_824983_3581"/>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="End for each model" refid="_15_5_1_bee0300_1233236077223_495325_3813"/>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="End for each variable" refid="_15_5_1_bee0300_1233235914301_115902_3536"/>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="For each model" refid="_15_5_1_bee0300_1233235816363_102381_3491"/>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="For each variable" refid="_15_5_1_bee0300_1233233987551_855048_2965"/>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="Get constraining var info" refid="_15_5_1_bee0300_1233234143238_245979_3052">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233234276707_10676_3080"/>
+</ownedElement>
+</state>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="save spacer" refid="_15_5_1_bee0300_1233235398348_656541_3425">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233235544363_302104_3488"/>
+</ownedElement>
+</state>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="save variable" refid="_15_5_1_bee0300_1233234398410_218844_3128">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233234472004_63219_3157"/>
+</ownedElement>
+</state>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="search default var" refid="_15_5_1_bee0300_1233234105332_604016_3023">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233234371660_322106_3097"/>
+</ownedElement>
+</state>
+<state humanType="State" icon="uml_specifications_files/icon_46174118.png" name="search var content" refid="_15_5_1_bee0300_1233234380895_323485_3099">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233234442238_594213_3156"/>
+</ownedElement>
+</state>
+<finalstate humanType="Final State" icon="uml_specifications_files/icon_1492287381.png" name="" refid="_15_5_1_bee0300_1233235990988_709777_3652"/>
+<pseudostate humanType="Pseudo State" icon="uml_specifications_files/icon_1837886895.png" name="" refid="_15_5_1_bee0300_1233233510441_486184_2822"/>
+<pseudostate humanType="Pseudo State" icon="uml_specifications_files/icon_859876555.png" name="" refid="_15_5_1_bee0300_1233234972801_117147_3302"/>
+<pseudostate humanType="Pseudo State" icon="uml_specifications_files/icon_1165470191.png" name="" refid="_15_5_1_bee0300_1233235984801_133299_3639"/>
+<pseudostate humanType="Pseudo State" icon="uml_specifications_files/icon_1836093446.png" name="isConstrainingVariable" refid="_15_5_1_bee0300_1233234637535_349700_3188"/>
+<pseudostate humanType="Pseudo State" icon="uml_specifications_files/icon_1836093446.png" name="isPostponedVariable" refid="_15_5_1_bee0300_1233234068676_184962_2994"/>
+<pseudostate humanType="Pseudo State" icon="uml_specifications_files/icon_1836093446.png" name="isPreviousSpacer" refid="_15_5_1_bee0300_1233235376613_380645_3396">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233235696723_561548_3489"/>
+</ownedElement>
+</pseudostate>
+<pseudostate humanType="Pseudo State" icon="uml_specifications_files/icon_1836093446.png" name="spacervariable" refid="_15_5_1_bee0300_1233235337207_211794_3332"/>
+</ownedElement>
+</region>
+<signal humanType="Signal" icon="uml_specifications_files/icon_778604709.png" name="constrained" refid="_15_5_1_bee0300_1233234844863_940193_3266"/>
+<signal humanType="Signal" icon="uml_specifications_files/icon_778604709.png" name="postponed" refid="_15_5_1_bee0300_1233234661332_491460_3200"/>
+<signal humanType="Signal" icon="uml_specifications_files/icon_778604709.png" name="previousSpacer" refid="_15_5_1_bee0300_1233235409785_261401_3469"/>
+<signal humanType="Signal" icon="uml_specifications_files/icon_778604709.png" name="spacer" refid="_15_5_1_bee0300_1233235365129_580053_3392"/>
+</ownedElement>
+<ownedDiagram>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_198127747.png" name="ThirdStepParsing" refid="_15_5_1_bee0300_1233232797457_441609_2664">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_1_bee0300_1233232797473_396711_2678">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437168_207745_751">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437168_528190_752" text="29/01/09 13:39"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437168_751042_753">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437168_332897_754" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437169_212040_755">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437169_828100_756" text="29/01/09 13:39"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+</ownedDiagram>
+</statemachine>
+<activityfinalnode humanType="Activity Final Node" icon="uml_specifications_files/icon_1492287381.png" name="" refid="_15_5_1_bee0300_1233236025801_855217_3710"/>
+<flowfinalnode humanType="Flow Final Node" icon="uml_specifications_files/icon_1909044219.png" name="" refid="_15_5_1_bee0300_1233232524863_901776_2602"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="First step parsing" refid="_15_5_1_bee0300_1233232459254_876769_2467">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233232659379_736839_2636"/>
+</ownedElement>
+</callbehavioraction>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="Generate prolog file" refid="_15_5_1_bee0300_1233232509660_269089_2571">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233232570613_64645_2635"/>
+</ownedElement>
+</callbehavioraction>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="Second step parsing" refid="_15_5_1_bee0300_1233232478801_286923_2506"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="Third step parsing" refid="_15_5_1_bee0300_1233232495504_578977_2539"/>
+</ownedElement>
+<ownedDiagram>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_1967594014.png" name="GrammarParser" refid="_15_5_1_bee0300_1233232417285_979529_2425">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_1_bee0300_1233232417285_227264_2438">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437154_265271_715">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437154_399204_716" text="29/01/09 13:33"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437154_312124_717">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437155_47904_718" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437156_97283_719">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437156_711592_720" text="29/01/09 13:33"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+</ownedDiagram>
+</activity>
+</ownedElement>
+</requirementsusecase>
+<requirementsusecase humanType="Requirements Use Case" icon="uml_specifications_files/icon_882392275.png" name="logol" refid="_15_5_bee0300_1232624745674_39381_1116">
+<ownedElement>
+<include humanType="Include" icon="uml_specifications_files/icon_761028846.png" isRelationship="true" name="" refid="_15_5_bee0300_1232624813652_823946_1188"/>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_bee0300_1232725203803_34146_2446">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437171_876192_763">
+<ownedElement>
+<elementvalue humanType="Element Value" icon="uml_specifications_files/icon_369060886.png" name="" refid="_16_0_1_bee0300_1287434437172_47178_764" text="Logol"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+<activity humanType="Activity" icon="uml_specifications_files/icon_2066407829.png" name="Logol" refid="_15_5_bee0300_1232722697887_891397_2042">
+<ownedElement>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722752508_137442_2085">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722752508_442992_2086" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722770976_989508_2118">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722770976_450635_2119" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722783069_883292_2149">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722783069_395974_2150" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722795990_248804_2181">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722795990_637998_2182" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722833815_91347_2230">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722833815_900314_2231" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722902092_118834_2284">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722902092_216210_2285" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722940823_166061_2378">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722940823_177097_2379" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722952479_923794_2402">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722952479_878627_2403" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722962228_534156_2428">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722962228_15533_2429" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1242835802936_739947_3459">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1242835802936_7922_3460" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1242835809733_129154_3462">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1242835809733_7928_3463" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_16_0_1_bee0300_1287434464897_636469_913">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_16_0_1_bee0300_1287434464902_251442_914" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_16_0_1_bee0300_1287434470198_228134_917">
+<ownedElement>
+<literalunlimitednatural humanType="Literal Unlimited Natural" icon="uml_specifications_files/icon_87172576.png" name="" refid="_16_0_1_bee0300_1287434470198_594358_918" text="1"/>
+</ownedElement>
+</controlflow>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_1967594014.png" name="Logol" refid="_15_5_bee0300_1232722697887_244678_2040">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_bee0300_1232722697887_592613_2053">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437157_776837_721">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437157_692313_722" text="23/01/09 15:58"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437157_712182_723">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437157_418150_724" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437158_362513_725">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437158_577024_726" text="23/01/09 15:58"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+<initialnode humanType="Initial Node" icon="uml_specifications_files/icon_1837886895.png" name="" refid="_15_5_bee0300_1232722747446_418661_2062"/>
+<statemachine humanType="State Machine" icon="uml_specifications_files/icon_1829932208.png" name="checkPattern" refid="_15_5_1_bee0300_1233237997957_662769_4540">
+<ownedElement>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_198127747.png" name="checkPattern" refid="_15_5_1_bee0300_1233237997941_93693_4538">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_1_bee0300_1233237997957_29649_4552">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437162_901309_733">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437162_353971_734" text="29/01/09 15:06"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437162_10753_735">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437162_9000_736" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437163_806031_737">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437163_969617_738" text="29/01/09 15:06"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+<signalevent humanType="Signal Event" icon="uml_specifications_files/icon_1025631718.png" name="" refid="_15_5_1_bee0300_1233238242160_670032_4803"/>
+<signalevent humanType="Signal Event" icon="uml_specifications_files/icon_1025631718.png" name="" refid="_15_5_1_bee0300_1233238409066_588167_4956"/>
+<signalevent humanType="Signal Event" icon="uml_specifications_files/icon_1025631718.png" name="" refid="_15_5_1_bee0300_1233238420566_561036_4959"/>
+<signalevent humanType="Signal Event" icon="uml_specifications_files/icon_1025631718.png" name="" refid="_15_5_1_bee0300_1233238447441_457326_4994"/>
+<signalevent humanType="Signal Event" icon="uml_specifications_files/icon_1025631718.png" name="" refid="_15_5_1_bee0300_1233238547848_467711_5043"/>
+<region humanType="Region" icon="uml_specifications_files/icon_931160979.png" name="" refid="_15_5_1_bee0300_1233237997957_16773_4541">
+<ownedElement>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238013316_917328_4589"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238065176_998545_4618"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238124004_819219_4684"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238141707_183187_4702">
+<ownedElement>
+<trigger humanType="Trigger" icon="uml_specifications_files/icon_1609388181.png" name="" refid="_15_5_1_bee0300_1233238409066_159645_4957"/>
+</ownedElement>
+</transition>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238163754_387225_4731"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238182645_962818_4758"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238225863_99150_4787">
+<ownedElement>
+<trigger humanType="Trigger" icon="uml_specifications_files/icon_1609388181.png" name="" refid="_15_5_1_bee0300_1233238242160_945530_4804"/>
+</ownedElement>
+</transition>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238277160_848393_4819"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238279910_200694_4835"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238288410_350291_4867"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238364613_543624_4905">
+<ownedElement>
+<trigger humanType="Trigger" icon="uml_specifications_files/icon_1609388181.png" name="" refid="_15_5_1_bee0300_1233238420566_768237_4960"/>
+</ownedElement>
+</transition>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238373004_94429_4923"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238428363_537831_4962"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238466785_669426_4999"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238538176_223886_5027">
+<ownedElement>
+<trigger humanType="Trigger" icon="uml_specifications_files/icon_1609388181.png" name="" refid="_15_5_1_bee0300_1233238547848_693776_5044"/>
+</ownedElement>
+</transition>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238628035_756334_5133"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238642832_595622_5149"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238652723_868804_5165"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238698973_436855_5181"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238718098_875515_5199"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238730582_61652_5226"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238740113_392716_5244"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238749816_727149_5271"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238770973_623714_5289"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238779754_153449_5316"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233238783582_117643_5332"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="Error&gt;max" refid="_15_5_1_bee0300_1233238338098_641730_4889"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="patternMatched,Error&lt;=max" refid="_15_5_1_bee0300_1233238283645_292947_4851"/>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="" refid="_15_5_1_bee0300_1233238466770_976979_4997"/>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="compare input vs pattern at position" refid="_15_5_1_bee0300_1233238065160_519652_4616"/>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="increment Error" refid="_15_5_1_bee0300_1233238373004_924601_4921"/>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="increment input position" refid="_15_5_1_bee0300_1233238163738_962134_4729"/>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="increment pattern position" refid="_15_5_1_bee0300_1233238141707_842555_4700"/>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="incrementDistance" refid="_15_5_1_bee0300_1233238770957_886345_5287"/>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="moveOnInput" refid="_15_5_1_bee0300_1233238576441_756356_5075"/>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="moveOnInputAndPattern" refid="_15_5_1_bee0300_1233238604832_233704_5104"/>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="moveOnPattern" refid="_15_5_1_bee0300_1233238558145_997876_5046"/>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="while Error&lt;Max and pattern not empty" refid="_15_5_1_bee0300_1233238013316_194158_4587"/>
+<finalstate humanType="Final State" icon="uml_specifications_files/icon_1492287381.png" name="matchKO" refid="_15_5_1_bee0300_1233238008816_208557_4574"/>
+<finalstate humanType="Final State" icon="uml_specifications_files/icon_1492287381.png" name="matchOK" refid="_15_5_1_bee0300_1233238217816_414201_4774"/>
+<pseudostate humanType="Pseudo State" icon="uml_specifications_files/icon_1837886895.png" name="" refid="_15_5_1_bee0300_1233238005191_420624_4561"/>
+<pseudostate humanType="Pseudo State" icon="uml_specifications_files/icon_1836093446.png" name="allowDistance" refid="_15_5_1_bee0300_1233238110566_452906_4671"/>
+<pseudostate humanType="Pseudo State" icon="uml_specifications_files/icon_1836093446.png" name="allowErrors" refid="_15_5_1_bee0300_1233238102691_513775_4658"/>
+<pseudostate humanType="Pseudo State" icon="uml_specifications_files/icon_1836093446.png" name="isequal" refid="_15_5_1_bee0300_1233238088035_48566_4645"/>
+<pseudostate humanType="Pseudo State" icon="uml_specifications_files/icon_1836093446.png" name="while Error&lt;Max and pattern not empty" refid="_15_5_1_bee0300_1233238255598_988396_4806"/>
+</ownedElement>
+</region>
+<signal humanType="Signal" icon="uml_specifications_files/icon_778604709.png" name="different" refid="_15_5_1_bee0300_1233238420551_690893_4958"/>
+<signal humanType="Signal" icon="uml_specifications_files/icon_778604709.png" name="Error" refid="_15_5_1_bee0300_1233238314598_66147_4885"/>
+<signal humanType="Signal" icon="uml_specifications_files/icon_778604709.png" name="exact" refid="_15_5_1_bee0300_1233238409066_897727_4955"/>
+<signal humanType="Signal" icon="uml_specifications_files/icon_778604709.png" name="exactOnly" refid="_15_5_1_bee0300_1233238547832_365520_5042"/>
+<signal humanType="Signal" icon="uml_specifications_files/icon_778604709.png" name="pattern matched" refid="_15_5_1_bee0300_1233238242160_626150_4802"/>
+<signal humanType="Signal" icon="uml_specifications_files/icon_778604709.png" name="patternMatched" refid="_15_5_1_bee0300_1233238314598_824281_4882"/>
+<signal humanType="Signal" icon="uml_specifications_files/icon_778604709.png" name="substitutionOnly" refid="_15_5_1_bee0300_1233238447441_630946_4993"/>
+</ownedElement>
+<ownedDiagram>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_198127747.png" name="checkPattern" refid="_15_5_1_bee0300_1233237997941_93693_4538">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_1_bee0300_1233237997957_29649_4552">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437162_901309_733">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437162_353971_734" text="29/01/09 15:06"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437162_10753_735">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437162_9000_736" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437163_806031_737">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437163_969617_738" text="29/01/09 15:06"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+</ownedDiagram>
+</statemachine>
+<flowfinalnode humanType="Flow Final Node" icon="uml_specifications_files/icon_1909044219.png" name="" refid="_15_5_bee0300_1232722926277_841462_2330"/>
+<decisionnode humanType="Decision Node" icon="uml_specifications_files/icon_829735639.png" name="match found &amp; max not reached" refid="_15_5_bee0300_1232722819519_283718_2207"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="apply pattern" refid="_15_5_bee0300_1232722902092_755413_2279"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="assert initial data" refid="_15_5_bee0300_1232722783069_994605_2144"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="close result file" refid="_15_5_bee0300_1232722930324_516105_2347"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="do backward" refid="_15_5_bee0300_1232722952479_801883_2396"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="Filter match" refid="_15_5_1_bee0300_1242835652620_104931_2951"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="If optimal function used, select optimal solutions" refid="_16_0_1_bee0300_1287434460523_741400_903">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_16_0_1_bee0300_1287434603908_431421_921"/>
+</ownedElement>
+</callbehavioraction>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="Load grammar file" refid="_15_5_bee0300_1232722795990_811319_2176"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="Open result file" refid="_15_5_bee0300_1232722770976_247754_2113"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="Open sequence file" refid="_15_5_bee0300_1232722752508_497895_2080"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="while match found &amp;&amp; max not reached" refid="_15_5_bee0300_1232722833815_968032_2225"/>
+</ownedElement>
+<ownedDiagram>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_1967594014.png" name="Logol" refid="_15_5_bee0300_1232722697887_244678_2040">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_bee0300_1232722697887_592613_2053">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437157_776837_721">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437157_692313_722" text="23/01/09 15:58"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437157_712182_723">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437157_418150_724" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437158_362513_725">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437158_577024_726" text="23/01/09 15:58"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+</ownedDiagram>
+</activity>
+</ownedElement>
+</requirementsusecase>
+<requirementsusecase humanType="Requirements Use Case" icon="uml_specifications_files/icon_882392275.png" name="LogolExec" refid="_15_5_bee0300_1232624545584_766743_1061">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_bee0300_1232624683416_159216_1102"/>
+<include humanType="Include" icon="uml_specifications_files/icon_761028846.png" isRelationship="true" name="" refid="_15_5_bee0300_1232624766177_822134_1144"/>
+<include humanType="Include" icon="uml_specifications_files/icon_761028846.png" isRelationship="true" name="" refid="_15_5_bee0300_1232624938336_850830_1220"/>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_bee0300_1232624592482_395391_1099">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437177_304738_777">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437177_40668_778" text="Analyse grammar and execute prolog"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437178_342991_779">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437178_108500_780" text="sequence analyse and splitting&#10;grammar analyse&#10;pattern matching&#10;results merge&#10;"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+<activity humanType="Activity" icon="uml_specifications_files/icon_2066407829.png" name="LogolExec" refid="_15_5_1_bee0300_1233230718926_682739_1658">
+<ownedElement>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233230863426_543797_1703">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233230863426_570508_1704" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233230877723_289575_1735">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233230877723_638863_1736" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233230922004_170076_1780">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233230922004_655499_1781" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233231242785_804949_1891">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233231242785_397482_1892" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233231259473_612512_1923">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233231259473_282831_1924" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233231279238_582073_1970">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233231279238_268295_1971" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233231298410_910924_1999">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233231298410_465146_2000" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233231563910_529186_2059">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233231563910_753585_2060" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233231628004_783054_2092">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233231628004_289636_2093" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233231637723_401468_2118">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233231637723_443509_2119" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233231645379_211602_2137">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233231645379_859016_2138" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233231776066_568471_2184">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233231776066_213885_2185" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233231902832_648112_2232">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233231902832_681056_2233" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233231928441_620159_2314">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233231928441_304003_2315" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233232008832_739941_2342">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233232008832_275260_2343" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233232020270_275102_2386">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233232020270_259924_2387" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236045457_242139_3761">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233236045457_328760_3762" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236063941_436199_3796">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233236063941_767405_3797" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1238141222782_696337_3157">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1238141222782_981782_3158" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="diagram" refid="_15_5_1_bee0300_1233231906473_631494_2256">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233231906473_141277_2257" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="logol grammar" refid="_15_5_1_bee0300_1233231924926_827463_2296">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233231924926_608582_2297" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="yes" refid="_15_5_1_bee0300_1233230944551_600667_1803">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233230944551_242007_1804" text="1"/>
+</ownedElement>
+</controlflow>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_1967594014.png" name="LogolExec" refid="_15_5_1_bee0300_1233230718926_329902_1656">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_1_bee0300_1233230718941_668080_1669">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437170_387317_757">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437170_404735_758" text="29/01/09 13:05"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437170_160231_759">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437170_697720_760" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437171_421262_761">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437171_883386_762" text="29/01/09 13:05"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_1967594014.png" name="sequenceAnalyser" refid="_15_5_1_bee0300_1233231426348_443144_2015">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_1_bee0300_1233231426348_131358_2027">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437148_558833_697">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437148_629184_698" text="29/01/09 13:17"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437148_887144_699">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437148_777070_700" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437149_112572_701">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437149_229302_702" text="29/01/09 13:17"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+<initialnode humanType="Initial Node" icon="uml_specifications_files/icon_1837886895.png" name="" refid="_15_5_1_bee0300_1233230730941_224030_1678"/>
+<initialnode humanType="Initial Node" icon="uml_specifications_files/icon_1837886895.png" name="" refid="_15_5_1_bee0300_1233231768285_614993_2161"/>
+<statemachine humanType="State Machine" icon="uml_specifications_files/icon_1829932208.png" name="SearchVarContent" refid="_15_5_1_bee0300_1233236397285_437694_3875">
+<ownedElement>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_198127747.png" name="SearchVarContent" refid="_15_5_1_bee0300_1233236397285_519933_3873">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_1_bee0300_1233236397301_393217_3887">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437175_606913_771">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437175_477860_772" text="29/01/09 14:39"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437176_125203_773">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437176_948316_774" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437176_509069_775">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437176_531632_776" text="29/01/09 14:39"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+<signalevent humanType="Signal Event" icon="uml_specifications_files/icon_1025631718.png" name="" refid="_15_5_1_bee0300_1233236435145_119733_3967"/>
+<signalevent humanType="Signal Event" icon="uml_specifications_files/icon_1025631718.png" name="" refid="_15_5_1_bee0300_1233236464660_196099_3999"/>
+<signalevent humanType="Signal Event" icon="uml_specifications_files/icon_1025631718.png" name="" refid="_15_5_1_bee0300_1233236476020_129430_4031"/>
+<signalevent humanType="Signal Event" icon="uml_specifications_files/icon_1025631718.png" name="" refid="_15_5_1_bee0300_1233236485145_675541_4063"/>
+<signalevent humanType="Signal Event" icon="uml_specifications_files/icon_1025631718.png" name="" refid="_15_5_1_bee0300_1233236492410_588797_4095"/>
+<signalevent humanType="Signal Event" icon="uml_specifications_files/icon_1025631718.png" name="" refid="_15_5_1_bee0300_1233236502035_259814_4127"/>
+<region humanType="Region" icon="uml_specifications_files/icon_931160979.png" name="" refid="_15_5_1_bee0300_1233236397285_107680_3876">
+<ownedElement>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236416863_134643_3922"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236459582_805534_3972">
+<ownedElement>
+<trigger humanType="Trigger" icon="uml_specifications_files/icon_1609388181.png" name="" refid="_15_5_1_bee0300_1233236464660_68483_4000"/>
+</ownedElement>
+</transition>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236468504_866218_4004">
+<ownedElement>
+<trigger humanType="Trigger" icon="uml_specifications_files/icon_1609388181.png" name="" refid="_15_5_1_bee0300_1233236476020_198137_4032"/>
+</ownedElement>
+</transition>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236480113_408985_4036">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" refid="_15_5_1_bee0300_1233237630520_310174_4519"/>
+<trigger humanType="Trigger" icon="uml_specifications_files/icon_1609388181.png" name="" refid="_15_5_1_bee0300_1233236485145_187702_4064"/>
+</ownedElement>
+</transition>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236488848_702658_4068">
+<ownedElement>
+<trigger humanType="Trigger" icon="uml_specifications_files/icon_1609388181.png" name="" refid="_15_5_1_bee0300_1233236492410_143529_4096"/>
+</ownedElement>
+</transition>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236496566_511348_4100">
+<ownedElement>
+<trigger humanType="Trigger" icon="uml_specifications_files/icon_1609388181.png" name="" refid="_15_5_1_bee0300_1233236502035_777001_4128"/>
+</ownedElement>
+</transition>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236545645_266785_4143"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236595176_971034_4171">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" refid="_15_5_1_bee0300_1233237583395_575103_4518"/>
+<trigger humanType="Trigger" icon="uml_specifications_files/icon_1609388181.png" name="" refid="_15_5_1_bee0300_1233236595176_922225_4172"/>
+</ownedElement>
+</transition>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236601582_831936_4174"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236620941_445605_4192">
+<ownedElement>
+<trigger humanType="Trigger" icon="uml_specifications_files/icon_1609388181.png" name="" refid="_15_5_1_bee0300_1233236760020_550721_4224"/>
+</ownedElement>
+</transition>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236780004_554141_4239"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236784004_313504_4255"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236792129_856096_4271"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236809191_757271_4300"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236886426_719309_4316"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236890410_895051_4332"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233237349723_349766_4375"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233237352707_829526_4393">
+<ownedElement>
+<trigger humanType="Trigger" icon="uml_specifications_files/icon_1609388181.png" name="" refid="_15_5_1_bee0300_1233237374426_475766_4451"/>
+</ownedElement>
+</transition>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233237364723_154285_4420"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233237369270_586528_4436"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233237434129_191139_4454"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233237439629_754305_4470"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233237460004_37256_4502"/>
+<transition humanType="Transition" icon="uml_specifications_files/icon_1847519247.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233237881160_260075_4523"/>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="apply anySpacer" refid="_15_5_1_bee0300_1233237352707_121114_4391">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233237417879_334175_4452"/>
+</ownedElement>
+</state>
+<state humanType="State" icon="uml_specifications_files/icon_46174118.png" name="checkPattern" refid="_15_5_1_bee0300_1233236426754_882082_3938">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233236752176_660948_4223"/>
+</ownedElement>
+</state>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="modelContent" refid="_15_5_1_bee0300_1233236488848_363178_4066">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233237772457_470722_4520"/>
+</ownedElement>
+</state>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="Record spacer info" refid="_15_5_1_bee0300_1233236459566_180591_3970"/>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="repeatContent" refid="_15_5_1_bee0300_1233236496566_710049_4098">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233237869113_193910_4521"/>
+</ownedElement>
+</state>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="suffixsearch" refid="_15_5_1_bee0300_1233236620926_403396_4190">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233236653254_531399_4218"/>
+</ownedElement>
+</state>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="variableContent" refid="_15_5_1_bee0300_1233236480098_147033_4034">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233237525941_273932_4517"/>
+</ownedElement>
+</state>
+<state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="viewContent" refid="_15_5_1_bee0300_1233236468504_309922_4002">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233237257363_389014_4360"/>
+</ownedElement>
+</state>
+<finalstate humanType="Final State" icon="uml_specifications_files/icon_1492287381.png" name="" refid="_15_5_1_bee0300_1233236541926_555900_4130"/>
+<finalstate humanType="Final State" icon="uml_specifications_files/icon_1492287381.png" name="matchKO" refid="_15_5_1_bee0300_1233236802535_39983_4287"/>
+<pseudostate humanType="Pseudo State" icon="uml_specifications_files/icon_1837886895.png" name="" refid="_15_5_1_bee0300_1233236403207_319734_3896"/>
+<pseudostate humanType="Pseudo State" icon="uml_specifications_files/icon_1836093446.png" name="hasSpacer" refid="_15_5_1_bee0300_1233237329223_850409_4362"/>
+<pseudostate humanType="Pseudo State" icon="uml_specifications_files/icon_1836093446.png" name="match" refid="_15_5_1_bee0300_1233236767285_277154_4226"/>
+<pseudostate humanType="Pseudo State" icon="uml_specifications_files/icon_1836093446.png" name="previous" refid="_15_5_1_bee0300_1233237036207_654903_4348"/>
+<pseudostate humanType="Pseudo State" icon="uml_specifications_files/icon_1836093446.png" name="previousSpacer" refid="_15_5_1_bee0300_1233236573957_603155_4159"/>
+<pseudostate humanType="Pseudo State" icon="uml_specifications_files/icon_1836093446.png" name="variableType" refid="_15_5_1_bee0300_1233236408160_436202_3909"/>
+</ownedElement>
+</region>
+<signal humanType="Signal" icon="uml_specifications_files/icon_778604709.png" name="fix content" refid="_15_5_1_bee0300_1233236435129_703087_3966"/>
+<signal humanType="Signal" icon="uml_specifications_files/icon_778604709.png" name="model" refid="_15_5_1_bee0300_1233236492410_290830_4094"/>
+<signal humanType="Signal" icon="uml_specifications_files/icon_778604709.png" name="repeat" refid="_15_5_1_bee0300_1233236502020_397820_4126"/>
+<signal humanType="Signal" icon="uml_specifications_files/icon_778604709.png" name="spacer" refid="_15_5_1_bee0300_1233236464660_549695_3998"/>
+<signal humanType="Signal" icon="uml_specifications_files/icon_778604709.png" name="variable" refid="_15_5_1_bee0300_1233236485129_640644_4062"/>
+<signal humanType="Signal" icon="uml_specifications_files/icon_778604709.png" name="view" refid="_15_5_1_bee0300_1233236476020_376562_4030"/>
+</ownedElement>
+<ownedDiagram>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_198127747.png" name="SearchVarContent" refid="_15_5_1_bee0300_1233236397285_519933_3873">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_1_bee0300_1233236397301_393217_3887">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437175_606913_771">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437175_477860_772" text="29/01/09 14:39"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437176_125203_773">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437176_948316_774" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437176_509069_775">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437176_531632_776" text="29/01/09 14:39"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+</ownedDiagram>
+</statemachine>
+<activityfinalnode humanType="Activity Final Node" icon="uml_specifications_files/icon_1492287381.png" name="" refid="_15_5_1_bee0300_1233236040520_143542_3744"/>
+<activityfinalnode humanType="Activity Final Node" icon="uml_specifications_files/icon_1492287381.png" name="" refid="_15_5_1_bee0300_1233236059238_18550_3779"/>
+<flowfinalnode humanType="Flow Final Node" icon="uml_specifications_files/icon_1909044219.png" name="" refid="_15_5_1_bee0300_1233231275254_870053_1948"/>
+<flowfinalnode humanType="Flow Final Node" icon="uml_specifications_files/icon_1909044219.png" name="" refid="_15_5_1_bee0300_1233232016754_64414_2367"/>
+<decisionnode humanType="Decision Node" icon="uml_specifications_files/icon_829735639.png" name="Grammar type" refid="_15_5_1_bee0300_1233231880238_219208_2215"/>
+<decisionnode humanType="Decision Node" icon="uml_specifications_files/icon_829735639.png" name="split sequence" refid="_15_5_1_bee0300_1233230905660_370230_1763">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233231184316_976115_1882"/>
+</ownedElement>
+</decisionnode>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="" refid="_15_5_1_bee0300_1233231279223_548900_1965"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="catchError" refid="_15_5_1_bee0300_1238141222767_304436_3152">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1238141343489_286349_3181"/>
+</ownedElement>
+</callbehavioraction>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="Convert Diagram" refid="_15_5_1_bee0300_1233231906457_684581_2250">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233231985020_902175_2334"/>
+</ownedElement>
+</callbehavioraction>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="convertGrammar" refid="_15_5_1_bee0300_1233231921395_271794_2281">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233231963988_933309_2330"/>
+</ownedElement>
+</callbehavioraction>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="create suffix tree" refid="_15_5_1_bee0300_1233231776051_285967_2179">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233231859535_520555_2209"/>
+</ownedElement>
+</callbehavioraction>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="execute" refid="_15_5_1_bee0300_1233232008832_226321_2337">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233232063941_915603_2407"/>
+</ownedElement>
+</callbehavioraction>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="For each sequence part" refid="_15_5_1_bee0300_1233230944535_202494_1798"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="For sequence and reverse complement" refid="_15_5_1_bee0300_1233231563895_705329_2054"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="format sequence" refid="_15_5_1_bee0300_1233230975926_707521_1831">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233231229332_905594_1883"/>
+</ownedElement>
+</callbehavioraction>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="Load sequence" refid="_15_5_1_bee0300_1233230877707_351434_1730"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="merge results" refid="_15_5_1_bee0300_1233231259457_76705_1918"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="sequenceanalyser" refid="_15_5_1_bee0300_1233231242770_911026_1886">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233231493379_374980_2042"/>
+</ownedElement>
+</callbehavioraction>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="setup parameters" refid="_15_5_1_bee0300_1233230863410_493745_1698"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="split sequence" refid="_15_5_1_bee0300_1233231627988_577822_2087"/>
+</ownedElement>
+<ownedDiagram>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_1967594014.png" name="LogolExec" refid="_15_5_1_bee0300_1233230718926_329902_1656">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_1_bee0300_1233230718941_668080_1669">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437170_387317_757">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437170_404735_758" text="29/01/09 13:05"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437170_160231_759">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437170_697720_760" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437171_421262_761">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437171_883386_762" text="29/01/09 13:05"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_1967594014.png" name="sequenceAnalyser" refid="_15_5_1_bee0300_1233231426348_443144_2015">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_1_bee0300_1233231426348_131358_2027">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437148_558833_697">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437148_629184_698" text="29/01/09 13:17"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437148_887144_699">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437148_777070_700" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437149_112572_701">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437149_229302_702" text="29/01/09 13:17"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+</ownedDiagram>
+</activity>
+</ownedElement>
+</requirementsusecase>
+<requirementsusecase humanType="Requirements Use Case" icon="uml_specifications_files/icon_882392275.png" name="MultiLogolExec" refid="_15_5_bee0300_1232624291299_217895_886">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_bee0300_1232624452669_700368_900"/>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_bee0300_1232624331278_630376_897">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437179_866927_781">
+<ownedElement>
+<elementvalue humanType="Element Value" icon="uml_specifications_files/icon_369060886.png" name="" refid="_16_0_1_bee0300_1287434437179_460105_782" text="LogolMultiExec"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437180_395289_783">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437180_422139_784" text="Split input sequences and dispatch treatments"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+<activity humanType="Activity" icon="uml_specifications_files/icon_2066407829.png" name="LogolMultiExec" refid="_15_5_bee0300_1232721775545_495428_1369">
+<ownedElement>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722089071_857845_1460">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722089071_698885_1461" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722311821_509422_1652">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722311821_994780_1653" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722365754_403451_1704">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722365754_382739_1705" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722379660_880498_1727">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722379660_964402_1728" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722394159_756363_1759">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722394159_588762_1760" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722399768_542710_1791">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722399768_532697_1792" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722415470_12889_1834">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722415470_360952_1835" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722425813_789890_1858">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722425828_849459_1859" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722435812_574045_1889">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722435812_51620_1890" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722638376_747480_1984">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722638376_753791_1985" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722654593_813604_2022">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722654593_202171_2023" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233230544598_477933_1177">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233230544598_59552_1178" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233230590816_347632_1245">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233230590816_895926_1246" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233230595816_893348_1263">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233230595816_313881_1264" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233230601426_671248_1283">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1233230601426_720955_1284" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1238141041902_189112_2736">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1238141041902_172938_2737" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1238141134076_715829_2768">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_1_bee0300_1238141134076_781699_2769" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="no" refid="_15_5_bee0300_1232722274511_722388_1579">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722274511_518616_1580" text="1"/>
+</ownedElement>
+</controlflow>
+<controlflow humanType="Control Flow" icon="uml_specifications_files/icon_490446816.png" isRelationship="true" name="yes" refid="_15_5_bee0300_1232722282104_202013_1620">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722282104_513513_1621" text="1"/>
+</ownedElement>
+</controlflow>
+<objectflow humanType="Object Flow" icon="uml_specifications_files/icon_2127593529.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722082134_74884_1431">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722082134_807698_1432" text="1"/>
+</ownedElement>
+</objectflow>
+<objectflow humanType="Object Flow" icon="uml_specifications_files/icon_2127593529.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722207359_297053_1513">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722207359_33946_1514" text="1"/>
+</ownedElement>
+</objectflow>
+<objectflow humanType="Object Flow" icon="uml_specifications_files/icon_2127593529.png" isRelationship="true" name="" refid="_15_5_bee0300_1232722278073_731741_1597">
+<ownedElement>
+<literalinteger humanType="Literal Integer" icon="uml_specifications_files/icon_1846483016.png" name="" refid="_15_5_bee0300_1232722278073_935645_1598" text="1"/>
+</ownedElement>
+</objectflow>
+<loopnode humanType="Loop Node" icon="uml_specifications_files/icon_710675128.png" name="" refid="_15_5_bee0300_1232722133208_939954_1477"/>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_1967594014.png" name="LogolMultiExec" refid="_15_5_bee0300_1232721775545_641406_1367">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_bee0300_1232721775545_268825_1380">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437150_900869_703">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437150_848717_704" text="23/01/09 15:42"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437150_654956_705">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437150_243780_706" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437151_626852_707">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437151_485598_708" text="23/01/09 15:42"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+<initialnode humanType="Initial Node" icon="uml_specifications_files/icon_1837886895.png" name="" refid="_15_5_bee0300_1232722057479_475585_1392"/>
+<centralbuffernode humanType="Central Buffer Node" icon="uml_specifications_files/icon_1528943235.png" name="" refid="_15_5_bee0300_1232722082134_878656_1426"/>
+<centralbuffernode humanType="Central Buffer Node" icon="uml_specifications_files/icon_1528943235.png" name="For each sequence" refid="_15_5_bee0300_1232722207359_581212_1508"/>
+<flowfinalnode humanType="Flow Final Node" icon="uml_specifications_files/icon_1909044219.png" name="" refid="_15_5_bee0300_1232722603269_383188_1965"/>
+<decisionnode humanType="Decision Node" icon="uml_specifications_files/icon_829735639.png" name="" refid="_15_5_bee0300_1232722406189_924299_1816"/>
+<decisionnode humanType="Decision Node" icon="uml_specifications_files/icon_829735639.png" name="All jobs over" refid="_15_5_bee0300_1232722335225_181858_1683"/>
+<decisionnode humanType="Decision Node" icon="uml_specifications_files/icon_829735639.png" name="Split Sequence" refid="_15_5_bee0300_1232722226092_627078_1541"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="" refid="_15_5_bee0300_1232722379660_837023_1722"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="" refid="_15_5_bee0300_1232722394159_984360_1755"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="" refid="_15_5_bee0300_1232722399768_886257_1786"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="" refid="_15_5_bee0300_1232722425813_843220_1854"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="catchError" refid="_15_5_1_bee0300_1238141041839_914145_2731">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1238141127701_37963_2760"/>
+</ownedElement>
+</callbehavioraction>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="catchJobsError" refid="_15_5_1_bee0300_1238141134076_827730_2763">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1238141188797_842419_2792"/>
+</ownedElement>
+</callbehavioraction>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="Execute Job" refid="_15_5_bee0300_1232722246185_270231_1562"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="Execute Job" refid="_15_5_bee0300_1232722311821_682538_1646"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="For each subsequence" refid="_15_5_bee0300_1232722282104_21468_1615"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="merge results" refid="_15_5_1_bee0300_1233230576254_26847_1229"/>
+<callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="Setup parameters" refid="_15_5_bee0300_1232722074572_829649_1409"/>
+<calloperationaction humanType="Call Operation Action" icon="uml_specifications_files/icon_1436580724.png" name="" refid="_15_5_bee0300_1232722528680_794862_1934"/>
+<calloperationaction humanType="Call Operation Action" icon="uml_specifications_files/icon_1436580724.png" name="" refid="_15_5_bee0300_1232722543508_144724_1948"/>
+</ownedElement>
+<ownedDiagram>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_1967594014.png" name="LogolMultiExec" refid="_15_5_bee0300_1232721775545_641406_1367">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_bee0300_1232721775545_268825_1380">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437150_900869_703">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437150_848717_704" text="23/01/09 15:42"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437150_654956_705">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437150_243780_706" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437151_626852_707">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437151_485598_708" text="23/01/09 15:42"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+</ownedDiagram>
+</activity>
+<generalization humanType="Generalization" icon="uml_specifications_files/icon_1658197374.png" isRelationship="true" refid="_15_5_bee0300_1232720900160_964370_1280"/>
+</ownedElement>
+</requirementsusecase>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_bee0300_1232627480554_706026_2115"/>
+<interaction humanType="Interaction" icon="uml_specifications_files/icon_812796350.png" name="SystemSequenceCalls" refid="_15_5_1_bee0300_1233238817691_628172_5349">
+<ownedElement>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_331567309.png" name="SystemSequenceCalls" refid="_15_5_1_bee0300_1233238817691_963479_5347">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_1_bee0300_1233238817707_797544_5360">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437160_574143_727">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437160_786228_728" text="29/01/09 15:20"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437160_311147_729">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437161_838398_730" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437161_788258_731">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437161_935678_732" text="29/01/09 15:20"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+<callevent humanType="Call Event" icon="uml_specifications_files/icon_1025631718.png" name="" refid="_15_5_1_bee0300_1233239081863_439969_5571"/>
+<callevent humanType="Call Event" icon="uml_specifications_files/icon_1025631718.png" name="" refid="_15_5_1_bee0300_1233239392254_292360_5742"/>
+<callevent humanType="Call Event" icon="uml_specifications_files/icon_1025631718.png" name="" refid="_15_5_1_bee0300_1233239476410_11843_5814"/>
+<callevent humanType="Call Event" icon="uml_specifications_files/icon_1025631718.png" name="" refid="_15_5_1_bee0300_1233239623285_342870_5886"/>
+<callevent humanType="Call Event" icon="uml_specifications_files/icon_1025631718.png" name="" refid="_15_5_1_bee0300_1233239678191_298942_5972"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233238907270_432032_5441" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233238907270_741791_5442"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233238907270_432032_5441" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233238907270_719788_5443"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233238983473_550886_5502" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233238983473_894212_5503"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233238983473_550886_5502" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233238983473_454800_5504"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239044832_719715_5523" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239044832_800461_5524"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239044832_719715_5523" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239044832_127100_5525"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239064176_462713_5544" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239064176_536542_5545"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239064176_462713_5544" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239064176_510260_5546"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239081863_611752_5566" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239081863_7913_5567"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239081863_611752_5566" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239081863_223007_5568"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239228676_24657_5605" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239228676_360100_5606"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239228676_24657_5605" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239228676_90483_5607"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239291020_471036_5638" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239291020_228812_5639"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239291020_471036_5638" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239291020_263826_5640"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239305629_810192_5660" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239305629_702793_5661"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239305629_810192_5660" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239305629_237925_5662"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239371332_721145_5715" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239371332_913845_5716"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239371332_721145_5715" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239371332_743481_5717"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239392238_131703_5737" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239392238_872810_5738"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239392238_131703_5737" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239392238_239986_5739"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239454520_384378_5777" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239454520_93248_5778"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239454520_384378_5777" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239454520_908285_5779"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239476395_38029_5809" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239476395_885776_5810"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239476395_38029_5809" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239476395_507738_5811"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239512488_805658_5830" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239512488_263037_5831"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239512488_805658_5830" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239512488_681922_5832"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239623285_903887_5881" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239623285_264036_5882"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239623285_903887_5881" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239623285_171257_5883"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239649145_96011_5903" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239649145_905654_5904"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239649145_96011_5903" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239649145_594739_5905"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239663520_764129_5935" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239663520_257878_5936"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239663520_764129_5935" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239663520_76679_5937"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239678176_759678_5967" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239678176_783918_5968"/>
+<messageoccurrencespecification groupBy="_15_5_1_bee0300_1233239678176_759678_5967" humanType="Message Occurrence Specification" icon="uml_specifications_files/icon_1404542271.png" name="" refid="_15_5_1_bee0300_1233239678176_334957_5969"/>
+<sendsignalevent humanType="Send Signal Event" icon="uml_specifications_files/icon_1025631718.png" name="" refid="_15_5_1_bee0300_1233239371348_510837_5720"/>
+<property humanType="Property" icon="uml_specifications_files/icon_1097584428.png" name="logol.exe" refid="_15_5_1_bee0300_1233238856160_508219_5407"/>
+<property humanType="Property" icon="uml_specifications_files/icon_1097584428.png" name="LogolExec" refid="_15_5_1_bee0300_1233238849270_967807_5395"/>
+<property humanType="Property" icon="uml_specifications_files/icon_1097584428.png" name="LogolMultiexec" refid="_15_5_1_bee0300_1233238841691_138073_5383"/>
+<property humanType="Property" icon="uml_specifications_files/icon_1097584428.png" name="preanalyse.exe" refid="_15_5_1_bee0300_1233238870535_937189_5419"/>
+<property humanType="Property" icon="uml_specifications_files/icon_1097584428.png" name="suffix array tool" refid="_15_5_1_bee0300_1233238882941_616116_5431"/>
+<property humanType="Property" icon="uml_specifications_files/icon_1097584428.png" name="User" refid="_15_5_1_bee0300_1233238824441_892478_5371"/>
+<lifeline humanType="Lifeline" icon="uml_specifications_files/icon_728892651.png" name="" refid="_15_5_1_bee0300_1233238824441_945558_5369"/>
+<lifeline humanType="Lifeline" icon="uml_specifications_files/icon_728892651.png" name="" refid="_15_5_1_bee0300_1233238841691_116364_5381"/>
+<lifeline humanType="Lifeline" icon="uml_specifications_files/icon_728892651.png" name="" refid="_15_5_1_bee0300_1233238849270_749001_5393"/>
+<lifeline humanType="Lifeline" icon="uml_specifications_files/icon_728892651.png" name="" refid="_15_5_1_bee0300_1233238856160_336634_5405"/>
+<lifeline humanType="Lifeline" icon="uml_specifications_files/icon_728892651.png" name="" refid="_15_5_1_bee0300_1233238870520_525353_5417"/>
+<lifeline humanType="Lifeline" icon="uml_specifications_files/icon_728892651.png" name="" refid="_15_5_1_bee0300_1233238882941_100520_5429"/>
+<message humanType="Message" icon="uml_specifications_files/icon_139629647.png" name="" refid="_15_5_1_bee0300_1233239044832_719715_5523"/>
+<message humanType="Message" icon="uml_specifications_files/icon_139629647.png" name="" refid="_15_5_1_bee0300_1233239228676_24657_5605"/>
+<message humanType="Message" icon="uml_specifications_files/icon_139629647.png" name="" refid="_15_5_1_bee0300_1233239305629_810192_5660"/>
+<message humanType="Message" icon="uml_specifications_files/icon_1920706113.png" name="" refid="_15_5_1_bee0300_1233239371332_721145_5715"/>
+<message humanType="Message" icon="uml_specifications_files/icon_139629647.png" name="" refid="_15_5_1_bee0300_1233239454520_384378_5777"/>
+<message humanType="Message" icon="uml_specifications_files/icon_139629647.png" name="" refid="_15_5_1_bee0300_1233239512488_805658_5830"/>
+<message humanType="Message" icon="uml_specifications_files/icon_139629647.png" name="" refid="_15_5_1_bee0300_1233239649145_96011_5903"/>
+<message humanType="Message" icon="uml_specifications_files/icon_139629647.png" name="" refid="_15_5_1_bee0300_1233239663520_764129_5935"/>
+<message humanType="Message" icon="uml_specifications_files/icon_139629647.png" name="analyse sequence" refid="_15_5_1_bee0300_1233238983473_550886_5502"/>
+<message humanType="Message" icon="uml_specifications_files/icon_139629647.png" name="analyse sequences" refid="_15_5_1_bee0300_1233238907270_432032_5441"/>
+<message humanType="Message" icon="uml_specifications_files/icon_24095844.png" name="ListofMatches" refid="_15_5_1_bee0300_1233239392238_131703_5737"/>
+<message humanType="Message" icon="uml_specifications_files/icon_24095844.png" name="ListOfPostponedVariables" refid="_15_5_1_bee0300_1233239081863_611752_5566"/>
+<message humanType="Message" icon="uml_specifications_files/icon_24095844.png" name="matchesAvailable" refid="_15_5_1_bee0300_1233239476395_38029_5809"/>
+<message humanType="Message" icon="uml_specifications_files/icon_24095844.png" name="matchesAvailable" refid="_15_5_1_bee0300_1233239623285_903887_5881"/>
+<message humanType="Message" icon="uml_specifications_files/icon_139629647.png" name="preanalyse postponed variables" refid="_15_5_1_bee0300_1233239064176_462713_5544"/>
+<message humanType="Message" icon="uml_specifications_files/icon_24095844.png" name="resultsAvailable" refid="_15_5_1_bee0300_1233239678176_759678_5967"/>
+<message humanType="Message" icon="uml_specifications_files/icon_139629647.png" name="search pattern vs sequence" refid="_15_5_1_bee0300_1233239291020_471036_5638"/>
+<combinedfragment humanType="Combined Fragment" icon="uml_specifications_files/icon_447746938.png" name="" refid="_15_5_1_bee0300_1233238933988_944077_5465">
+<ownedElement>
+<interactionoperand humanType="Interaction Operand" icon="uml_specifications_files/icon_390885980.png" name="" refid="_15_5_1_bee0300_1233238933988_597842_5466">
+<ownedElement>
+<interactionconstraint humanType="Interaction Constraint" icon="uml_specifications_files/icon_1596584075.png" name="" refid="_15_5_1_bee0300_1233238943363_81842_5480">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_15_5_1_bee0300_1233238943363_636703_5481" text="For all sequences"/>
+</ownedElement>
+</interactionconstraint>
+</ownedElement>
+</interactionoperand>
+</ownedElement>
+</combinedfragment>
+<combinedfragment humanType="Combined Fragment" icon="uml_specifications_files/icon_447746938.png" name="" refid="_15_5_1_bee0300_1233238957395_744463_5484">
+<ownedElement>
+<interactionoperand humanType="Interaction Operand" icon="uml_specifications_files/icon_390885980.png" name="" refid="_15_5_1_bee0300_1233238957395_518149_5485">
+<ownedElement>
+<combinedfragment humanType="Combined Fragment" icon="uml_specifications_files/icon_447746938.png" name="" refid="_15_5_1_bee0300_1233239133004_654612_5587">
+<ownedElement>
+<interactionoperand humanType="Interaction Operand" icon="uml_specifications_files/icon_390885980.png" name="" refid="_15_5_1_bee0300_1233239133004_53451_5588">
+<ownedElement>
+<combinedfragment humanType="Combined Fragment" icon="uml_specifications_files/icon_447746938.png" name="ForAllSubSequences" refid="_15_5_1_bee0300_1233239544426_880559_5863">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" refid="_15_5_1_bee0300_1233239587973_752984_5879"/>
+<interactionoperand humanType="Interaction Operand" icon="uml_specifications_files/icon_390885980.png" name="" refid="_15_5_1_bee0300_1233239544426_415133_5864"/>
+</ownedElement>
+</combinedfragment>
+<interactionconstraint humanType="Interaction Constraint" icon="uml_specifications_files/icon_1596584075.png" name="" refid="_15_5_1_bee0300_1233239155832_433180_5602">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_15_5_1_bee0300_1233239155832_694365_5603" text="For all sub sequences"/>
+</ownedElement>
+</interactionconstraint>
+</ownedElement>
+</interactionoperand>
+</ownedElement>
+</combinedfragment>
+<combinedfragment humanType="Combined Fragment" icon="uml_specifications_files/icon_447746938.png" name="" refid="_15_5_1_bee0300_1233239425926_644337_5758">
+<ownedElement>
+<interactionoperand humanType="Interaction Operand" icon="uml_specifications_files/icon_390885980.png" name="" refid="_15_5_1_bee0300_1233239425926_990186_5759">
+<ownedElement>
+<combinedfragment humanType="Combined Fragment" icon="uml_specifications_files/icon_447746938.png" name="" refid="_15_5_1_bee0300_1233239343238_404916_5694">
+<ownedElement>
+<interactionoperand humanType="Interaction Operand" icon="uml_specifications_files/icon_390885980.png" name="" refid="_15_5_1_bee0300_1233239343238_564194_5695">
+<ownedElement>
+<interactionconstraint humanType="Interaction Constraint" icon="uml_specifications_files/icon_1596584075.png" name="" refid="_15_5_1_bee0300_1233239365098_565049_5712">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_15_5_1_bee0300_1233239365098_506061_5713" text="Use suffix tool for spacer search"/>
+</ownedElement>
+</interactionconstraint>
+</ownedElement>
+</interactionoperand>
+<interactionoperand humanType="Interaction Operand" icon="uml_specifications_files/icon_390885980.png" name="" refid="_15_5_1_bee0300_1233239343238_624137_5696"/>
+</ownedElement>
+</combinedfragment>
+<interactionconstraint humanType="Interaction Constraint" icon="uml_specifications_files/icon_1596584075.png" name="" refid="_15_5_1_bee0300_1233239447051_916119_5774">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_15_5_1_bee0300_1233239447051_421001_5775" text="ForAllVariables"/>
+</ownedElement>
+</interactionconstraint>
+</ownedElement>
+</interactionoperand>
+</ownedElement>
+</combinedfragment>
+<interactionconstraint humanType="Interaction Constraint" icon="uml_specifications_files/icon_1596584075.png" name="" refid="_15_5_1_bee0300_1233238968801_34725_5499">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_15_5_1_bee0300_1233238968801_109871_5500" text="For all sequences"/>
+</ownedElement>
+</interactionconstraint>
+</ownedElement>
+</interactionoperand>
+</ownedElement>
+</combinedfragment>
+</ownedElement>
+<ownedDiagram>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_331567309.png" name="SystemSequenceCalls" refid="_15_5_1_bee0300_1233238817691_963479_5347">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_1_bee0300_1233238817707_797544_5360">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437160_574143_727">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437160_786228_728" text="29/01/09 15:20"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437160_311147_729">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437161_838398_730" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437161_788258_731">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437161_935678_732" text="29/01/09 15:20"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+</ownedDiagram>
+</interaction>
+<dependency humanType="Dependency" icon="uml_specifications_files/icon_2052652496.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233232090770_679764_2408">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_1_bee0300_1233232090770_200196_2409"/>
+</ownedElement>
+</dependency>
+<dependency humanType="Dependency" icon="uml_specifications_files/icon_2052652496.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233232256129_206339_2410">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_1_bee0300_1233232256129_232769_2411"/>
+</ownedElement>
+</dependency>
+<dependency humanType="Dependency" icon="uml_specifications_files/icon_2052652496.png" isRelationship="true" name="" refid="_15_5_1_bee0300_1233236720441_121530_4221">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_1_bee0300_1233236720441_221406_4222"/>
+</ownedElement>
+</dependency>
+</ownedElement>
+</component>
+<association humanType="Association" icon="uml_specifications_files/icon_230392343.png" isRelationship="true" name="" refid="_15_5_bee0300_1232625732625_615711_1306">
+<ownedElement>
+<property humanType="Property" icon="uml_specifications_files/icon_1097584428.png" name="" refid="_15_5_bee0300_1232625732625_939243_1307"/>
+<property humanType="Property" icon="uml_specifications_files/icon_1097584428.png" name="" refid="_15_5_bee0300_1232625732625_764035_1308"/>
+</ownedElement>
+</association>
+<association humanType="Association" icon="uml_specifications_files/icon_230392343.png" isRelationship="true" name="" refid="_15_5_bee0300_1232625735313_847937_1359">
+<ownedElement>
+<property humanType="Property" icon="uml_specifications_files/icon_1097584428.png" name="" refid="_15_5_bee0300_1232625735313_384879_1360"/>
+<property humanType="Property" icon="uml_specifications_files/icon_1097584428.png" name="" refid="_15_5_bee0300_1232625735313_949957_1361"/>
+</ownedElement>
+</association>
+<association humanType="Association" icon="uml_specifications_files/icon_230392343.png" isRelationship="true" name="" refid="_15_5_bee0300_1232626106788_649158_1584">
+<ownedElement>
+<property humanType="Property" icon="uml_specifications_files/icon_1097584428.png" name="" refid="_15_5_bee0300_1232626106788_991041_1585"/>
+<property humanType="Property" icon="uml_specifications_files/icon_1097584428.png" name="" refid="_15_5_bee0300_1232626106788_852769_1586"/>
+</ownedElement>
+</association>
+</ownedElement>
+<ownedDiagram>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_2047187157.png" name="JobManager" refid="_15_5_bee0300_1232626004016_333525_1527">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_bee0300_1232626004016_771987_1539">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437165_893582_743">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437165_823022_744" text="22/01/09 13:06"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437165_269230_745">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437166_904191_746" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437166_214042_747">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437166_573510_748" text="22/01/09 13:06"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+<diagram humanType="Diagram" icon="uml_specifications_files/icon_2047187157.png" name="JobSubmission" refid="_15_5_bee0300_1232624088047_640722_825">
+<ownedElement>
+<comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" isHidden="true" refid="_15_5_1_bee0300_1233239891191_61874_5991"/>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_15_5_bee0300_1232624088047_802608_837">
+<ownedElement>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437152_483147_709">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437152_992819_710" text="22/01/09 12:34"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437152_525672_711">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437152_501763_712" text="osallou"/>
+</ownedElement>
+</slot>
+<slot humanType="Slot" icon="uml_specifications_files/icon_769913844.png" isHidden="true" refid="_16_0_1_bee0300_1287434437153_744276_713">
+<ownedElement>
+<literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" name="" refid="_16_0_1_bee0300_1287434437153_50490_714" text="22/01/09 12:34"/>
+</ownedElement>
+</slot>
+</ownedElement>
+</instancespecification>
+</ownedElement>
+</diagram>
+</ownedDiagram>
+</usecasepackage>
+<usecasepackage humanType="Use Case Package" icon="uml_specifications_files/icon_1215757902.png" name="System-Level Use Cases" refid="_12_1_f00036a_1174037936849_571422_353">
+<ownedElement>
+<instancespecification humanType="Instance Specification" icon="uml_specifications_files/icon_1449030751.png" isHidden="true" name="" refid="_12_1_f00036a_1174037982146_820937_356"/>
+</ownedElement>
+</usecasepackage>
+</ownedElement>
+</model>
+</magicdraw>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<magicdraw><comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" id="_15_5_1_bee0300_1233232659379_736839_2636"><annotatedElement humanName="Annotated Element" mode="standard,expert"><callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="First step parsing" refid="_15_5_1_bee0300_1233232459254_876769_2467"/></annotatedElement><body humanName="Body" mode="standard,expert">Apply grammar parser to load information on each variable definition:
+give a unique id for all variables taking care of AND and OR
+Record constraints applied on each variable
+Define all views as variables</body><owner humanName="Owner" humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" mode="standard,expert" name="First step parsing" refid="_15_5_1_bee0300_1233232459254_876769_2467"/><owningElement humanName="Owning Element" humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="First step parsing" refid="_15_5_1_bee0300_1233232459254_876769_2467"/></comment></magicdraw>

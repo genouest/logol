@@ -1,0 +1,106 @@
+.TH LogolExec 1  "September 28, 2011" "version 1.0" "USER COMMANDS"
+.SH NAME
+LogolExec \- Program to parse a logol grammar and search pattern in a sequence.
+.SH SYNOPSIS
+.B LogolExec
+[\-h]
+.PP
+.SH INSTALLATION
+ Logol requires the Cassiopee Ruby gem. To install it run:
+ gem install cassiopee
+.SH CONFIGURATION
+ LogolExec use a default configuration file in /etc/logol/logol.properties.
+It is possible to specify a different configuration file via command-line.
+Temporary and results directory must be writable by the user.
+ By default, /var/lib/logol/results contains generated results and /tmp is
+used at temporary directory.
+ .PP
+.SH OPTIONS
+ Minimum arguments are \-m for logol model or \-g for logol grammar, and \-s for input sequence
+.SS MAIN OPTIONS
+.TP
+\-h
+ display the list of commands.
+.TP
+\-v
+ get version
+.TP 
+\-conf
+ specify configuration file
+.TP 
+\-s
+ sequence file to analyse.
+.TP
+\-g
+ grammar file to analyse
+.TP
+\-m
+ model file to analyse
+.TP
+\-check
+ check a grammar, no execution. Requires \-g
+.TP
+\-dna
+ analyse dna, is default
+.TP
+\-rna
+ analyse rna
+.TP
+\-protein
+ analyse protein
+.TP
+\-max
+  maximum returned solutions
+.TP
+\-all
+ analyse both directions of the sequence
+.TP
+\-output
+ output file name, must be unique
+.PP
+.SS OTHER OPTIONS
+.TP
+\-sequenceID
+ position of sequence in bank
+.TP
+\-uid
+ Use a defined identifier for the query
+.TP
+\-lmax
+ maximum length of a variable
+.TP
+\-maxspacer
+ maximum size of a spacer
+.TP
+\-offset
+ Offset value to add to positions
+.TP
+\-start
+ Start position on sequence
+.TP
+\-end
+ End position on sequence
+.TP
+\-noclean
+ Do not delete created files after treatment (for debug)
+.TP
+\-enabledups
+ enable duplicate result matches. By default only keep singletons
+.TP
+\-filter
+ Type of filter when enabledups is not enabled. Allowed types are exact(default),local,local0,global.
+.TP
+\-lmin
+ minimum length of a variable (to speedup parsing)
+.TP
+\-c
+ maximum size of a match (to speedup parsing)
+.TP
+\-maxres
+ maximum result size of a match  (to speedup parsing)
+.PP
+
+
+.SH AUTHOR
+Olivier Sallou (olivier.sallou (at) irisa.fr)
+

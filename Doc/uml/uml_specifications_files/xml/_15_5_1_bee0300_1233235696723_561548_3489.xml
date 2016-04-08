@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<magicdraw><comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" id="_15_5_1_bee0300_1233235696723_561548_3489"><annotatedElement humanName="Annotated Element" mode="standard,expert"><pseudostate humanType="Pseudo State" icon="uml_specifications_files/icon_1836093446.png" name="isPreviousSpacer" refid="_15_5_1_bee0300_1233235376613_380645_3396"/></annotatedElement><body humanName="Body" mode="standard,expert">Checks if previous variable was a spacer.
+Example:
+_,VAR1
+there is a spacer in front of VAR1
+_,(VAR1,VAR2)
+There is no spacer in front of VAR1, spacer is in front of variable created with group VAR1,VAR2
+Views are seen and managed like any other variable.</body><owner humanName="Owner" humanType="Pseudo State" icon="uml_specifications_files/icon_1836093446.png" mode="standard,expert" name="isPreviousSpacer" refid="_15_5_1_bee0300_1233235376613_380645_3396"/><owningElement humanName="Owning Element" humanType="Pseudo State" icon="uml_specifications_files/icon_1836093446.png" name="isPreviousSpacer" refid="_15_5_1_bee0300_1233235376613_380645_3396"/></comment></magicdraw>

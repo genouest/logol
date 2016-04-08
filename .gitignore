@@ -6,3 +6,7 @@ test/tmp/*
 test/results/*
 src/logol.tokens
 src/org/irisa/genouest/logol/parser/*
+.classpath
+.project
+.settings
+

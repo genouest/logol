@@ -1,0 +1,24 @@
+<!ELEMENT begin ( #PCDATA ) >
+
+<!ELEMENT content ( #PCDATA ) >
+
+<!ELEMENT end ( #PCDATA ) >
+
+<!ELEMENT errors ( #PCDATA ) >
+
+<!ELEMENT fastaHeader ( #PCDATA ) >
+
+<!ELEMENT id ( #PCDATA ) >
+
+<!ELEMENT match ( model, id, begin, end, errors, variable+ ) >
+
+<!ELEMENT model ( #PCDATA ) >
+
+<!ELEMENT sequences ( fastaHeader, match+ ) >
+
+<!ELEMENT size ( #PCDATA ) >
+
+<!ELEMENT text ( #PCDATA ) >
+
+<!ELEMENT variable ( begin, end, size, errors, content, text ) >
+<!ATTLIST variable name CDATA  #REQUIRED >

@@ -1,0 +1,6 @@
+def:{
+morphism(foo,a,g)
+}
+mod1()==>"aaaa",.*,X1:{@[10,12],#[2,8]}
+
+mod1()==*>SEQ1

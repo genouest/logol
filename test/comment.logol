@@ -1,0 +1,6 @@
+def:{
+morphism(foo,a,g)
+}
+mod1()==>"aaa","acgt":{_R1%1comment%},?R1%anothercomment%:{@[0,@R1%beginref% + 50]}
+
+mod1()==*>SEQ1

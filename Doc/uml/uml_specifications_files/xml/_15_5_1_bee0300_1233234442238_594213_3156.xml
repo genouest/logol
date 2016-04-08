@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<magicdraw><comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" id="_15_5_1_bee0300_1233234442238_594213_3156"><annotatedElement humanName="Annotated Element" mode="standard,expert"><state humanType="State" icon="uml_specifications_files/icon_46174118.png" name="search var content" refid="_15_5_1_bee0300_1233234380895_323485_3099"/></annotatedElement><body humanName="Body" mode="standard,expert">Based on constraints, search a specific sequence part
+
+If previous variable is a spacer:
+
+If content is known at time of the request (with or without cost/distance constraint)  use suffix array search.
+Else, use anySpacer predicate to search current variable</body><owner humanName="Owner" humanType="State" icon="uml_specifications_files/icon_46174118.png" mode="standard,expert" name="search var content" refid="_15_5_1_bee0300_1233234380895_323485_3099"/><owningElement humanName="Owning Element" humanType="State" icon="uml_specifications_files/icon_46174118.png" name="search var content" refid="_15_5_1_bee0300_1233234380895_323485_3099"/></comment></magicdraw>

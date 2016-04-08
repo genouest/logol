@@ -1,0 +1,5 @@
+def:{
+}
+mod1()==>"aaaa","cgtc":{$[0,$VAR2]},"cctc":{_VAR2}:{$[0,2]}
+
+mod1()==*>SEQ1

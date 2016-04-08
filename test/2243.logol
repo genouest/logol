@@ -1,0 +1,4 @@
+def:{
+}
+mod2()==>?VAR1,"acgt":{_VAR1}
+mod2()==*>SEQ1

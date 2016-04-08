@@ -1,0 +1,9 @@
+def:{
+// A def comment
+morphism(foo,a,g)
+}
+// My first comment
+// multi line comments
+mod1()==>"aaa","acgt":{_R1%1comment%},?R1%anothercomment%:{@[0,@R1%beginref% + 50]}
+// an other comment
+mod1()==*>SEQ1

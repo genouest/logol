@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<magicdraw><comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" id="_15_5_1_bee0300_1238141127701_37963_2760"><annotatedElement humanName="Annotated Element" mode="standard,expert"><callbehavioraction humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="catchError" refid="_15_5_1_bee0300_1238141041839_914145_2731"/></annotatedElement><body humanName="Body" mode="standard,expert">In case of error during job preparation, catch errors and:
+1) print error
+or 
+2) send email error</body><owner humanName="Owner" humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" mode="standard,expert" name="catchError" refid="_15_5_1_bee0300_1238141041839_914145_2731"/><owningElement humanName="Owning Element" humanType="Call Behavior Action" icon="uml_specifications_files/icon_1915658948.png" name="catchError" refid="_15_5_1_bee0300_1238141041839_914145_2731"/></comment></magicdraw>

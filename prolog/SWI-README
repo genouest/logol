@@ -1,0 +1,7 @@
+/opt/local/bin/swipl -f swi-logol.pro
+
+Create sav file:
+/opt/local/bin/swipl -g "compile('swi-logol'),qsave_program('logol.sav'),halt."
+
+Create exe:
+/opt/local/bin/swipl-ld  -initfile swi-logol.pl -o logol.exe -v  logolSwiMain.c  sicstus.pl logol.pl

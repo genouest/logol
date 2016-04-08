@@ -1,0 +1,3 @@
+#!/bin/bash
+echo $1 > mycostfunction.log
+echo 2

@@ -1,0 +1,7 @@
+def:{
+morphism(foo,a,g)
+matrix(foo,g,[0,1,1,0])
+}
+mod1()==>"aaa",X1:{#[2,4]},X1
+
+mod1()==*>SEQ1

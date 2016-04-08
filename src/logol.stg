@@ -1,0 +1,4 @@
+group logol;
+sequencedef(id,file) ::= <<
+'fileDef(SEQ' <id> ',' <file> '.fsa)'
+>> 

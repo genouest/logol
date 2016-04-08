@@ -1,0 +1,6 @@
+def:{
+morphism(foo,a,g)
+}
+mod1()==>"ccc","acgt":{_R1},X1:{#[3,4]}:{$mycostfunction[0,3]}
+
+mod1()==*>SEQ1

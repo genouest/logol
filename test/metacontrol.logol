@@ -1,0 +1,8 @@
+def:{
+}
+controls:{
+#[mod1.VAR1,mod1.VAR2]=6
+}
+mod1()==>"ccc",X1:{#[2,4],_VAR1},X2:{#[2,4],_VAR2},X3:{#[2,2],_VAR3}
+
+mod1()==*>SEQ1

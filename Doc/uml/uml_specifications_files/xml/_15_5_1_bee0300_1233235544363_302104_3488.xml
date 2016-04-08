@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<magicdraw><comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" id="_15_5_1_bee0300_1233235544363_302104_3488"><annotatedElement humanName="Annotated Element" mode="standard,expert"><state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="save spacer" refid="_15_5_1_bee0300_1233235398348_656541_3425"/></annotatedElement><body humanName="Body" mode="standard,expert">Save spacer content except if  spacer is the left most spacer of the search e.g. the start of the search.
+Example:
+Sequence = xxxxxxxxxxxxxxxxxacgt
+Match = acgt, spacer = xxxxxxxxxxxxxxxxx
+Spacer is not saved
+
+Sequence = xxxxxxxxxxxxxxxxxacgtyyyyyyyyyyytgca
+Match = tgca, spacer = yyyyyyyyyyy
+Spacer is saved</body><owner humanName="Owner" humanType="State" icon="uml_specifications_files/icon_1124046256.png" mode="standard,expert" name="save spacer" refid="_15_5_1_bee0300_1233235398348_656541_3425"/><owningElement humanName="Owning Element" humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="save spacer" refid="_15_5_1_bee0300_1233235398348_656541_3425"/></comment></magicdraw>

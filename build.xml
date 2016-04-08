@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="LogolMatch" basedir="." default="create-jar">
+
+	<property environment="env" />
+	
+	<!-- needed properties: 
+			prolog=sicstus or swipl
+			vmatch_path= /softs/local/vmatch/vmatch.distribution/ (your path to vmatch if available)
+			cassiopee_path=/softs/local/cassiopee/current/
+            target.dir=/path_where_files_should_be_installed			
+	 -->
+
+	<property name="version" value="1.7.4" />
+
+	<condition property="ruby_path" value="${env.RUBY_PATH}"
+		else="">
+		<isset property="env.RUBY_PATH" />
+	</condition>	
+	
+	<!-- Cobertura code coverage -->
+	<condition property="cobertura.dir" value="${env.COBERTURA}"
+		else="/tmp">
+		<isset property="env.COBERTURA" />
+	</condition>
+
+	<condition property="sicstus.dir" value="${env.SICSTUS_BIN}"
+		else="">
+		<isset property="env.SICSTUS_BIN" />
+	</condition>
+
+	<condition property="work.dir" value="${WORKSPACE}" else="${basedir}">
+		<isset property="WORKSPACE" />
+	</condition>
+
+	<condition property="build.nb" value="${BUILD_NUMBER}" else="0">
+		<isset property="BUILD_NUMBER" />
+	</condition>
+
+
+	<path id="cobertura.classpath">
+		<fileset dir="${cobertura.dir}">
+			<include name="cobertura.jar" />
+			<include name="lib/**/*.jar" />
+		</fileset>
+	</path>
+	<taskdef classpathref="cobertura.classpath" resource="tasks.properties" />
+	<property name="instrumented.dir" value="instrumentedbin" />
+
+
+
+	<property name="src.dir" value="src" />
+	<property name="bin.dir" value="bin" />
+	<property name="lib.dir" value="lib" />
+	<property name="test.dir" value="test" />
+	<property name="res.dir" value="${test.dir}/results" />
+	<property name="prolog.dir" value="prolog" />
+	<property name="javadoc.dir" value="Doc/JavaDoc" />
+	<property name="doc.dir" value="Doc" />
+
+	<property name="archive.file" value="logol_${version}.${os.name}-${os.arch}.zip"/>
+
+	<patternset id="java.libs" includes="*.jar" />
+	<path id="mylibs">
+		<fileset dir="${basedir}/lib">
+			<patternset refid="java.libs" />
+		</fileset>
+	</path>
+
+
+
+	<target name="clean" description="Delete all generated files">
+		<delete dir="${bin.dir}" />
+		<delete>
+			<fileset dir="${test.dir}/tmp">
+				<include name="*"/>
+			</fileset>
+			<fileset dir="${test.dir}/results">
+				<include name="*"/>
+			</fileset>
+		</delete>
+	</target>
+
+	<target name="compile" description="Compile src files" depends="clean,antlr">
+		<delete dir="${bin.dir}" />
+		<mkdir dir="${bin.dir}" />
+		<javac source="1.5" target="1.5" classpathref="mylibs" srcdir="${src.dir}"
+			destdir="${bin.dir}"
+			excludes="logol__.g,logol.tokens,logol.g,logol.stg,logol.tpl,log4j.properties">
+
+		</javac>
+
+	</target>
+
+	<target name="compile_sicstus_exe" description="Creates sicstus executables">
+		<delete file="${prolog.dir}/logol.exe" />
+		<delete file="${prolog.dir}/preanalyse.exe" />
+		<exec dir="${prolog.dir}" executable="${sicstus.dir}sicstus">
+			<arg
+				line="--goal &quot;compile(logol), save_program('logol.sav'), halt.&quot;" />
+		</exec>
+		<exec dir="${prolog.dir}" executable="${sicstus.dir}spld">
+			<arg
+				line="--main=user  logolMain.c --static --resources=random -o logol.exe" />
+		</exec>
+		<exec dir="${prolog.dir}" executable="${sicstus.dir}spld">
+			<arg
+				line="--main=user  preanalyse.c --static --resources=random -o preanalyse.exe" />
+		</exec>
+		<condition property="compile_exe.ok">
+			<and>
+				<available file="${prolog.dir}/logol.exe" />
+				<available file="${prolog.dir}/preanalyse.exe" />
+			</and>
+		</condition>
+		<fail unless="compile_exe.ok"
+			message="Exec files could not be compiled, see previous logs." />
+	</target>
+
+	<target name="compile_swi_exe" description="swi-prolog">
+		<delete file="${prolog.dir}/logol.exe" />
+		<delete file="${prolog.dir}/preanalyse.exe" />
+		<exec dir="${prolog.dir}" executable="swipl-ld">
+			<arg
+				line="-goal true -initfile swi-logol.pl -o logol.exe -v logolSwiMain.c sicstus.pl logol.pl" />
+		</exec>
+		<exec dir="${prolog.dir}" executable="swipl-ld">
+			<arg
+				line="-goal true -initfile swi-logol.pl -o preanalyse.exe -v preSwiMain.c sicstus.pl logol.pl" />
+		</exec>
+		<condition property="compile_exe.ok">
+			<and>
+				<available file="${prolog.dir}/logol.exe" />
+				<available file="${prolog.dir}/preanalyse.exe" />
+			</and>
+		</condition>
+		<fail unless="compile_exe.ok"
+			message="Exec files could not be compiled, see previous logs." />
+	</target>
+
+	<target name="test_swi" description="unit test with swi-prolog"
+		depends="setup,compile_swi_exe,create-jar">
+		<exec executable="swipl">
+			<arg line=" -f ${basedir}/prolog/unitTest/swi-unit.pl -- ${basedir}/prolog/unitTest/sampleUnit.pro ${basedir}/prolog/sicstus.pl ${work.dir}/SwiLogolSelfTest-PUnit-${build.nb}.xml ${basedir}/prolog/unitTest/plunittest.pro ${basedir}/prolog/logol.pl ${basedir}/test/test.fasta" />
+		</exec>
+		<junit printsummary="yes" fork="yes" haltonfailure="yes">
+			<classpath>
+				<pathelement path="${classpath}" />
+				<fileset dir="${basedir}/lib">
+					<include name="**/*.jar" />
+				</fileset>
+			</classpath>
+			<sysproperty key="logol.install" value="${basedir}" />
+			<sysproperty key="log4j.configuration" value="file://${basedir}/log4j.properties" />
+			<sysproperty key="prolog" value="swipl" />
+			<sysproperty key="ruby_path" value="${ruby_path}"/>
+
+			
+			<formatter type="brief" usefile="false" />
+			<formatter type="xml" usefile="true" />
+			<test name="org.irisa.genouest.logol.test.GrammarTest" todir="${work.dir}" outfile="SwiLogolSelfTest-${build.nb}" />
+		</junit>
+	</target>
+
+
+
+	<target name="instrument" description="instrument code for code coverage">
+		<delete file="cobertura.ser" />
+		<delete dir="${instrumented.dir}" />
+		<cobertura-instrument todir="${instrumented.dir}">
+			<ignore regex="org.apache.log4j.*" />
+			<ignore regex="org.irisa.genouest.logol.parser.*" />
+			<ignore regex="org.irisa.genouest.logol.test.*" />
+			<fileset dir="${bin.dir}">
+				<include name="**/*.class" />
+				<exclude name="**/logolParser.class" />
+				<exclude name="**/logolLexer.class" />
+				<exclude name="**/*Test.class" />
+			</fileset>
+		</cobertura-instrument>
+	</target>
+
+	<target name="compile-test" description="Compile src files for test"
+		depends="clean,antlr">
+		<delete dir="${bin.dir}" />
+		<mkdir dir="${bin.dir}" />
+		<javac source="1.5" target="1.5" classpathref="mylibs" srcdir="${src.dir}"
+			destdir="${bin.dir}"
+			excludes="logol__.g,logol.tokens,logol.g,logol.stg,logol.tpl,log4j.properties"
+			debug="on">
+		</javac>
+	</target>
+
+	<target name="create-jar-test" description="Create jar file for test"
+		depends="compile-test">
+		<jar destfile="${lib.dir}/LogolExec.jar" basedir="${bin.dir}"
+			update="true">
+			<manifest>
+				<attribute name="Main-Class" value="org.irisa.genouest.logol.Logol" />
+				<attribute name="Implementation-Version" value="${version}" />
+				<attribute name="Implementation-Build" value="${build.nb}" />
+			</manifest>
+		</jar>
+	</target>
+
+
+	<target name="create-jar" description="Create jar file" depends="compile">
+		<jar destfile="${lib.dir}/LogolExec.jar" basedir="${bin.dir}"
+			update="true">
+			<manifest>
+				<attribute name="Main-Class" value="org.irisa.genouest.logol.Logol" />
+				<attribute name="Implementation-Version" value="${version}" />
+				<attribute name="Implementation-Build" value="${build.nb}" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="test_sicstus_instrumented" description="Self integration test"
+		depends="setup,compile_sicstus_exe,create-jar-test,instrument">
+
+		<!-- prolog unit tests using punit framework -->
+		<exec executable="${sicstus.dir}sicstus">
+			<arg line=" -l ${basedir}/prolog/unitTest/sampleUnit.pro -a fakefile fakefile ${work.dir}/LogolSelfTest-PUnit-${build.nb}.xml ${basedir}/prolog/unitTest/plunittest.pro ${basedir}/prolog/logol.pl ${basedir}/test/test.fasta" />
+		</exec>
+		<junit printsummary="yes" fork="yes" haltonfailure="yes">
+			<sysproperty key="net.sourceforge.cobertura.datafile"
+				file="${basedir}/cobertura.ser" />
+			<classpath location="${instrumented.dir}" />
+			<classpath>
+				<pathelement path="${classpath}" />
+				<fileset dir="${basedir}/lib">
+					<include name="**/*.jar" />
+				</fileset>
+			</classpath>
+			<classpath refid="cobertura.classpath" />
+
+			<sysproperty key="logol.install" value="${basedir}" />
+			<sysproperty key="log4j.configuration" value="file://${basedir}/log4j.properties" />
+			<sysproperty key="prolog" value="sicstus" />
+			<sysproperty key="ruby_path" value="${ruby_path}"/>
+
+			<!--<sysproperty key="suffix.install" value="${suffix}" />-->
+			<formatter type="xml" />
+			<test name="org.irisa.genouest.logol.test.GrammarTest" todir="${work.dir}"
+				outfile="LogolSelfTest-${build.nb}" />
+		</junit>
+		<delete file="${work.dir}/coverage.xml" />
+		<cobertura-report format="xml" destdir="${work.dir}"
+			srcdir="${src.dir}" />
+		<copy file="${work.dir}/coverage.xml" todir="${basedir}" />
+	</target>
+
+	
+	<target name="test_sicstus" description="Self integration test"
+		depends="setup,compile_sicstus_exe,create-jar">
+		
+		<!-- prolog unit tests using punit framework -->
+		<exec executable="${sicstus.dir}sicstus">
+			<arg line=" -l ${basedir}/prolog/unitTest/sampleUnit.pro -a fakefile fakefile ${work.dir}/LogolSelfTest-PUnit-${build.nb}.xml ${basedir}/prolog/unitTest/plunittest.pro ${basedir}/prolog/logol.pl ${basedir}/test/test.fasta" />
+		</exec>
+		
+		<junit printsummary="yes" fork="yes" haltonfailure="yes">
+			<classpath>
+				<pathelement path="${classpath}" />
+				<fileset dir="${basedir}/lib">
+					<include name="**/*.jar" />
+				</fileset>
+
+			</classpath>
+			<sysproperty key="logol.install" value="${basedir}" />
+			<sysproperty key="log4j.configuration" value="file://${basedir}/log4j.properties" />
+			<sysproperty key="prolog" value="sicstus" />
+			<sysproperty key="ruby_path" value="${ruby_path}"/>
+			<formatter type="xml" />
+			<test name="org.irisa.genouest.logol.test.GrammarTest" todir="${res.dir}" outfile="LogolSelfTest" />
+		</junit>
+		
+	</target>
+
+	<target name="antlr" description="generate parser and lexer from grammar">
+		<delete file="src/org/irisa/genouest/logol/parser/logolLexer.java" />
+		<delete file="src/org/irisa/genouest/logol/parser/logolParser.java" />
+		<java classpathref="mylibs" classname="org.antlr.Tool" fork="true"
+			failonerror="true">
+			<arg value="-verbose" />
+			<arg value="-o" />
+			<arg path="src/org/irisa/genouest/logol/parser" />
+			<arg path="src/logol.g" />
+		</java>
+	</target>
+
+	<target name="javadoc">
+		<javadoc access="public" destdir="${javadoc.dir}" author="true"
+			version="true" use="true" windowtitle="org.irisa.genouest.logol">
+
+			<fileset dir="${src.dir}" defaultexcludes="yes">
+				<include name="**/*.java" />
+				<exclude name="org/irisa/genouest/logol/test/**/*.java" />
+				<exclude name="org/irisa/genouest/logol/parser/**/*.java" />
+			</fileset>
+		</javadoc>
+	</target>
+
+	<target name="doc" description="generate latex doc">
+		<exec dir="${basedir}/tools" executable="chmod">
+			<arg line=" 777 generate-doc.sh" />
+		</exec>
+		<exec dir="${basedir}/tools" executable="${basedir}/tools/generate-doc.sh">
+		</exec>
+	</target>
+
+	<condition property="isNotWindows">
+	    <not>
+		<os family="windows"/>
+	    </not>
+	</condition>
+
+	<target name="updatemod" if="isNotWindows">
+		<exec dir="${basedir}/tools" executable="chmod">
+			<arg line=" 755 logolIndex.rb" />
+		</exec>
+		<exec dir="${basedir}/tools" executable="chmod">
+			<arg line=" 755 generate-doc.sh" />
+		</exec>
+		<exec dir="${basedir}/tools" executable="chmod">
+			<arg line=" 755 logolSearch.sh" />
+		</exec>
+		<exec dir="${basedir}/tools" executable="chmod">
+			<arg line=" 755 mycostfunction" />
+		</exec>
+		<exec dir="${basedir}" executable="chmod">
+			<arg line=" 777 LogolExec.sh" />
+		</exec>
+		<exec dir="${basedir}" executable="chmod">
+			<arg line=" 777 LogolMultiExec.sh" />
+		</exec>
+		<exec dir="${basedir}" executable="chmod">
+			<arg line=" 777 logolTest.sh" />
+		</exec>
+	</target>
+
+	<target name="setup" description="set up project" depends="updatemod">
+
+		<replaceregexp file="${basedir}/tools/suffixSearch.rb"
+			match="&#34;vmatch" replace="&#34;${vmatch_path}vmatch" />
+		
+		<replaceregexp file="${basedir}/tools/cassiopeeSearch.rb"
+			match="DIR=&#34;&#34;" replace="DIR=&#34;${cassiopee_path}&#34;" />
+
+	</target>
+
+	<target name="archive" depends="clean">
+		<delete file="../${archive.file}" />
+		<zip destfile="../${archive.file}">
+			<fileset dir="${basedir}/../logol-${version}"  excludes="doc/uml/**" />
+		</zip>
+	</target>
+	
+	<target name="dist_swi" depends="test_swi,archive" >
+		<echo message="Archive ../${archive.file} created."/>
+	</target>
+	<target name="dist_sicstus" depends="test_sicstus,archive" >
+		<echo message="Archive ../${archive.file} created."/>
+	</target>
+
+    <target name="deploy" description="Deploy application">
+        <copy todir="${target.dir}" 
+          preservelastmodified="true">
+            <fileset dir="${basedir}">
+                <include name="**/*.*"/>
+            </fileset>
+        </copy>
+        <exec dir="${target.dir}/tools" executable="chmod">
+            <arg line=" 755 logolIndex.rb" />
+        </exec>
+        <exec dir="${target.dir}/tools" executable="chmod">
+            <arg line=" 755 logolSearch.sh" />
+        </exec>
+        <exec dir="${target.dir}" executable="chmod">
+            <arg line=" 755 LogolExec.sh" />
+        </exec>
+        <exec dir="${target.dir}" executable="chmod">
+            <arg line=" 755 LogolMultiExec.sh" />
+        </exec>
+        <exec dir="${target.dir}/tools" executable="chmod">
+            <arg line=" 755 cassiopeeSearch.rb" />
+        </exec>
+        <exec dir="${target.dir}/tools" executable="chmod">
+            <arg line=" 755 suffixSearch.rb" />
+        </exec>
+        <exec dir="${target.dir}/tools" executable="chmod">
+            <arg line=" 755 logolSearch.rb" />
+        </exec>
+        <exec dir="${target.dir}/prolog" executable="chmod">
+            <arg line=" 755 logol.exe" />
+        </exec>
+        <exec dir="${target.dir}/prolog" executable="chmod">
+            <arg line=" 755 preanalyse.exe" />
+        </exec>
+    </target>
+</project>

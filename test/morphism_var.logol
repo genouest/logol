@@ -1,0 +1,8 @@
+def:{
+morphism(test,a,g)
+morphism(test,c,t)
+morphism(test,g,a)
+morphism(test,t,t)
+}
+mod1()==>X1:{#[1,1],_VAR1},"aac",+"test" ?VAR1
+mod1()==*>SEQ1

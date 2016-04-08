@@ -1,0 +1,5 @@
+def:{
+}
+mod1()==>repeat(("ccctgtccccc"|"tgtc");[0,1])+[2,5]
+mod1()==*>SEQ1
+

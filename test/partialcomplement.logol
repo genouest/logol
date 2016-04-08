@@ -1,0 +1,5 @@
+def:{
+}
+mod1()==>"gggg",.*,"gggg"
+
+mod1()==*>SEQ1

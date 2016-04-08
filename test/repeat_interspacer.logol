@@ -1,0 +1,4 @@
+def:{
+}
+mod1()==>"aaa",repeat("acgt" ,[0,30])+
+mod1()==*>SEQ1

@@ -1,0 +1,4 @@
+mod1()==>mod2(VAR1),(?VAR1)
+mod2(VAR1)==>"gt","cc":{_VAR1}
+
+mod1()==*>SEQ1

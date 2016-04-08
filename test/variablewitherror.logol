@@ -1,0 +1,6 @@
+def:{
+morphism(foo,a,g)
+}
+mod1()==>"ccc","acgt":{_R1},?R1:{$[0,1]}
+
+mod1()==*>SEQ1

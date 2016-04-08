@@ -1,0 +1,6 @@
+def:{
+morphism(foo,a,g)
+}
+mod1()==>! "cgta":{#[3,5],@[3,10]}
+
+mod1()==*>SEQ1

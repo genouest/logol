@@ -1,0 +1,4 @@
+
+Logol is available under Affero GPL 3.0
+
+http://www.gnu.org/licenses/agpl-3.0.fr.html

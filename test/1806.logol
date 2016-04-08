@@ -1,0 +1,4 @@
+def:{
+}
+mod1()==>(("ttt",STEM1:{#[4,9],_LSTEM1},-"wc" ?LSTEM1)|(STEM1:{#[4,9],_LSTEM1},-"wc" ?LSTEM1))
+mod1()==*>SEQ1 

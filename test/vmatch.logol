@@ -1,0 +1,2 @@
+mod1(LOGOLVAR1)==>(("tattaggtt":{$[0,1],$$[0,1]})|("tattaggtt":{$[0,2]})),"ggtgcaaaagtaattgcggtt":{$[0,10],$$[0,1]},LOGOLVAR2%S%:{#[0,30]},-"wc" "ggtgcaaaagtaattgcggtt":{$[0,10],$$[0,1]},(("aacctaata":{$[0,1],$$[0,1]})|("aacctaata":{$[0,2]}))
+mod1(LOGOLVAR3)==*>SEQ1

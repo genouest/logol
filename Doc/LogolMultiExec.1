@@ -1,0 +1,109 @@
+.TH LogolMultiExec 1  "September 28, 2011" "version 1.0" "USER COMMANDS"
+.SH NAME
+LogolMultiExec \- Program to parse a logol grammar and search pattern in a sequence, it
+allows one to run the LogolExec program on multi fasta input and to dispatch the treatements
+ on a DRMAA compliant grid or on multi-cpu servers.
+.SH SYNOPSIS
+.B LogolMultiExec
+[\-h]
+.PP
+.SH INSTALLATION
+ LogolMultiExec needs the drmaa library. Default is to use SGE library. If another is used,
+ one should update the symbolic link in  /usr/share/logol/lib/drmaa.jar to the correct library.
+ LD_LIBRARY_PATH must also updated in /sur/share/logol/LogolMultiExec.sh
+.SH CONFIGURATION
+ LogolMultiExec and LogolExec share the same configuration file. See LogolExec man page for more info.
+ .PP
+.SH OPTIONS
+ Minimum arguments are \-m for logol model or \-g for logol grammar, and \-s for input sequence
+.SS MAIN OPTIONS
+.TP
+\-h
+ display the list of commands.
+.TP
+\-v
+ get version
+.TP 
+\-conf
+ specify configuration file
+.TP 
+\-s
+ sequence file to analyse.
+.TP
+\-g
+ grammar file to analyse
+.TP
+\-m
+ model file to analyse
+.TP
+\-dna
+ analyse dna, is default
+.TP
+\-rna
+ analyse rna
+.TP
+\-protein
+ analyse protein
+.TP
+\-max
+  maximum returned solutions
+.TP
+\-all
+ analyse both directions of the sequence
+.TP
+\-out
+ Zip output file name
+.TP
+\-fasta
+ Add fasta conversion of the matches to the result archive
+.TP
+\-contig
+ Set the input bank as contig sequences
+.TP
+\-guid
+ Unique identifier for the query
+.TP
+\-email
+ Email address to sent result availability info
+ (needs mail setup)
+.TP
+\-local
+ Use local mode (multi core)
+.TP
+\-sge
+ Use SGE mode
+.TP
+\-forcesplit
+ Force the sequence splitting according to parameters and whatever is the number of model used in grammar
+.PP
+.SS OTHER OPTIONS
+.TP
+\-lmax
+ maximum length of a variable
+.TP
+\-maxspacer
+ maximum size of a spacer
+.TP
+\-noclean
+ Do not delete created files after treatment (for debug)
+.TP
+\-enabledups
+ enable duplicate result matches. By default only keep singletons
+.TP
+\-filter
+ Type of filter when enabledups is not enabled. Allowed types are exact(default),local,local0,global.
+.TP
+\-lmin
+ minimum length of a variable (to speedup parsing)
+.TP
+\-maxmatchsize
+ maximum size of a match (to speedup parsing)
+.TP
+\-maxres
+ maximum result size of a match  (to speedup parsing)
+.PP
+
+
+.SH AUTHOR
+Olivier Sallou (olivier.sallou (at) irisa.fr)
+

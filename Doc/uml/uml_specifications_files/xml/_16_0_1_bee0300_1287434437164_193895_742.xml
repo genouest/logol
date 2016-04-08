@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<magicdraw><literalstring humanType="Literal String" icon="uml_specifications_files/icon_258320710.png" id="_16_0_1_bee0300_1287434437164_193895_742"><name humanName="Name"></name><owner humanName="Owner" humanType="Slot" icon="uml_specifications_files/icon_769913844.png" mode="expert" refid="_16_0_1_bee0300_1287434437164_936811_741"/><owningSlot humanName="Owning Slot" humanType="Slot" icon="uml_specifications_files/icon_769913844.png" refid="_16_0_1_bee0300_1287434437164_936811_741"/><qualifiedName humanName="Qualified Name">High-Level Use Cases::System1::grammarParser::::</qualifiedName><text humanName="Text" mode="standard">parse grammar
+first analysis
+preanalyse for postponed variable
+generate prolog content</text><value humanName="Value" mode="standard,expert">parse grammar
+first analysis
+preanalyse for postponed variable
+generate prolog content</value><visibility humanName="Visibility">public</visibility></literalstring></magicdraw>

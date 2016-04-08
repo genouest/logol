@@ -1,0 +1,116 @@
+
+/**
+*	Rules definition
+*
+*/
+	
+
+rule :	definitions? (model|query|NEWLINE)+  EOF;
+	
+
+
+model:	ModelName  '(' VARIABLE?  (',' VARIABLE )* ')'  '==>'  view;
+
+
+ModelName :	'mod' INT ('%'('a'..'z'|'A'..'Z'|'0'..'9')+'%')? ;
+
+view :	( ( (',' | ';'  | '|')? ( constrainedEntity[parentId]  ) ) )+   ;
+
+query :	ModelName '('(VARIABLE)? (',' VARIABLE)* ')'  ('.' ModelName '('(VARIABLE)? (',' VARIABLE)* ')')* '==*>' Sequence ('.' sequences)*;
+
+
+sequences :	 Sequence | '(' Sequence ('.' Sequence)* ')';
+
+Sequence :	 'SEQ' INT ;
+
+SequenceDef :	'SEQ' INT ',' ANY '.fsa'  ;
+
+definitions :	'def:' NEWLINE? '{' ((definition NEWLINE)|NEWLINE)* '}' NEWLINE ;
+	
+definition : ('matrix' '(' LOWID ',' LOWID ',' matrix ')') | ( 'morphism' '(' LOWID ',' LOWID ',' LOWID ')' );
+
+
+matrix	:	'[' INT (',' INT)* ']' ;
+
+constrainedEntity  : entity (':' '{' stringConstraints '}')?  (':' '{' structConstraints '}')?  ;
+
+entity :	entityVariable 	| ModelName '(' VARIABLE?  (',' VARIABLE )* ')' 
+		| modifier string 
+		| string 
+		| '!' string 
+		| repeat
+		| '!external' '(' ANY ',' '[' ANY (',' ANY)* ']' ',' '[' ANY (',' ANY)* ']' ')' 
+		| '(' view ')' ;
+
+entityVariable : stringVariableElement  ;
+
+stringVariableElement :	modifier? stringVariable ;
+
+modifier : 	(morphism) | ('$' string);
+
+stringConstraints :	 stringConstraint (',' stringConstraint )* ;
+	
+stringConstraint :	'_' VARIABLE  
+		| '?' VARIABLE 
+		| '?' string  
+		| '@' interval  
+		| '/@' interval 
+		| '#' interval 
+		| '!' '@' interval  
+		| '!' '/@' interval 
+		| '!' '#' interval; 
+	
+
+structConstraints :	structConstraint (',' structConstraint )* ;
+
+structConstraint :	'_' VARIABLE 
+		| '?' VARIABLE 
+		| '?' string 
+		| ('$'|'p$') LOWID? interval
+		| ('/$'|'p/$') interval
+		| '!' ('$'|'p$') LOWID? interval 
+		| '!' ('/$'|'p/$') interval;
+
+
+structureValues
+	:	structureValue (',' structureValue);
+
+structureValue
+	:	'?' VARIABLE | '$' intexpression;
+	
+morphism :	operator string ;
+
+weight	:	'$' string;
+
+stringVariable : '.*'   | ('?'? VARIABLE) ;
+
+repeat:	'repeat(' view (','|';')? interval? ')+' interval? ;
+
+parameters :	'_,' interval | '_;' interval ;
+
+
+
+operator: '+' | '-';
+
+VARIABLE: ('A'..'Z')+('0'..'9')+ ('%'('a'..'z'|'A'..'Z'|'0'..'9')+'%')?;
+
+string	:	'"'  LOWID '"';
+		
+VARID	:	('A'..'Z')+;
+LOWID	: ('a'..'z'|'\-')+;
+ID  :   ('a'..'z'|'A'..'Z')+ ;
+INT :   ('0'..'9')+ ;
+ANY	: ('a'..'z'|'A'..'Z'|'0'..'9')+ ;	
+NEWLINE: '\r'? '\n' ;
+WHITESPACE : ( '\t' | ' ' | '\r' | '\n'| '\u000C' )+ { $channel = HIDDEN; };
+	
+
+
+varrefinteger:	VARIABLE | '@' VARIABLE | '/@' VARIABLE | '#' VARIABLE | '$' VARIABLE | '/$' VARIABLE | ('?' VARIABLE ('.nboccur' | '.minDistance' | '.maxDistance'));	
+
+intexpression:	'_' | INT | varrefinteger | (varrefinteger operator INT) | ( INT operator varrefinteger);
+
+interval : ('[' intexpression ',' intexpression ']')| ('[' intexpression ']' ) ;
+
+
+

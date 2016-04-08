@@ -1,0 +1,6 @@
+def:{
+morphism(foo,a,g)
+}
+mod1()==>"ccc",VAR1:{#[5,12]}:{% "a":30}
+
+mod1()==*>SEQ1

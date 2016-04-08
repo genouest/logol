@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<magicdraw><comment humanType="Comment" icon="uml_specifications_files/icon_1116046870.png" id="_15_5_1_bee0300_1233233259207_654831_2761"><annotatedElement humanName="Annotated Element" mode="standard,expert"><state humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="preanalyse" refid="_15_5_1_bee0300_1233233167879_952790_2733"/></annotatedElement><body humanName="Body" mode="standard,expert">Execute preanalyse executable with generated prolog file.
+Postponed variables are stored in a temporary file with variable id, link with the variable where it is saved and constraint type.
+Example:
+logolvar12 is saved at logolvar18 and used as a cost constraint.</body><owner humanName="Owner" humanType="State" icon="uml_specifications_files/icon_1124046256.png" mode="standard,expert" name="preanalyse" refid="_15_5_1_bee0300_1233233167879_952790_2733"/><owningElement humanName="Owning Element" humanType="State" icon="uml_specifications_files/icon_1124046256.png" name="preanalyse" refid="_15_5_1_bee0300_1233233167879_952790_2733"/></comment></magicdraw>

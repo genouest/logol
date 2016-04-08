@@ -1,0 +1,70 @@
+<mxGraphModel>
+  <root>
+    <Workflow label="MyWorkflow" description="" href="" id="0">
+      <mxCell/>
+    </Workflow>
+    <Layer label="Default Layer" id="1">
+      <mxCell parent="0"/>
+    </Layer>
+    <Start label="model1" description="" name="model1" parameters="" id="7">
+      <mxCell style="actor" parent="1" vertex="1">
+        <mxGeometry x="130" y="160" width="32" height="32" as="geometry"/>
+      </mxCell>
+    </Start>
+    <Variable label="aaaa" description="" overlap="" morphism="" data="mydata" neg_begin="" stg_begin="" neg_end="" stg_end="" neg_size="" stg_optimalsize="" stg_size="" stg_content="&quot;aaaa&quot;" stg_save="" neg_cost="" stc_cost="" neg_dist="" stc_dist="" id="8">
+      <mxCell style="rounded" parent="1" vertex="1">
+        <mxGeometry x="260" y="170" width="72" height="32" as="geometry"/>
+      </mxCell>
+    </Variable>
+    <End label="Terminate" description="" href="" id="9">
+      <mxCell style="symbol;image=images/symbols/terminate.png" parent="1" vertex="1">
+        <mxGeometry x="570" y="180" width="32" height="32" as="geometry"/>
+      </mxCell>
+    </End>
+    <Edge label="" description="" id="10">
+      <mxCell parent="1" source="7" target="8" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </Edge>
+    <Edge label="" description="" id="11">
+      <mxCell parent="1" source="8" target="18" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </Edge>
+    <Rule label="rule" description="" id="13">
+      <mxCell style="ellipse" parent="1" vertex="1">
+        <mxGeometry x="150" y="70" width="32" height="32" as="geometry"/>
+      </mxCell>
+    </Rule>
+    <Model label="model" description="" parameters="" overlap="" name="model1" id="14">
+      <mxCell style="ellipse" parent="1" vertex="1">
+        <mxGeometry x="270" y="70" width="72" height="32" as="geometry"/>
+      </mxCell>
+    </Model>
+    <End label="Terminate" description="" href="" id="15">
+      <mxCell style="symbol;image=images/symbols/terminate.png" parent="1" vertex="1">
+        <mxGeometry x="470" y="70" width="32" height="32" as="geometry"/>
+      </mxCell>
+    </End>
+    <Edge label="" description="" id="16">
+      <mxCell parent="1" source="13" target="14" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </Edge>
+    <Edge label="" description="" id="17">
+      <mxCell parent="1" source="14" target="15" edge="1">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </Edge>
+    <Variable label="optimal" description="" overlap="" negdata="" morphism="" data="X1" neg_begin="" stg_begin="" neg_end="" stg_end="" neg_size="" stg_optimalsize="on" stg_size="2,8" stg_content="" stg_save="" neg_cost="" stc_cost="" neg_dist="" stc_dist="" id="18">
+      <mxCell style="rounded" vertex="1" parent="1">
+        <mxGeometry x="400" y="170" width="72" height="32" as="geometry"/>
+      </mxCell>
+    </Variable>
+    <Edge label="" description="" id="19">
+      <mxCell edge="1" parent="1" source="18" target="9">
+        <mxGeometry relative="1" as="geometry"/>
+      </mxCell>
+    </Edge>
+  </root>
+</mxGraphModel>

@@ -1,0 +1,8 @@
+org.irisa.genouest.logol
+org.irisa.genouest.logol.dispatcher
+org.irisa.genouest.logol.parser
+org.irisa.genouest.logol.test
+org.irisa.genouest.logol.types
+org.irisa.genouest.logol.utils
+org.irisa.genouest.logol.utils.converter
+org.irisa.genouest.logol.utils.model

@@ -1,0 +1,27 @@
+History:
+1.7.4: 08/01/16 O. Sallou - Fix multiexec error message display
+       08/04/16 O. Sallou - Add *HALT1* in grammar to stop a search at first match in a definition (see test/halt.logol example)
+                          - Update antlrworks release to work with Java 8
+1.7.3: 28/05/15 O. Sallou - Fix in repeat definition (allow not to specify
+spacer)
+       17/10/15 O. Sallou - Fix index test existence (performance impact)
+1.7.2: 05/04/15 O. Sallou - Enhance cassiopee search performance
+                            Manage Out Of Memory error in xslt transformation
+                            Support JAVA_OPTS env variable in cmd line for
+                            LogolExec and LogolMultiExec
+1.7.1: 25/04/14 O. Sallou - Fix version in build.xml
+1.7.0: 16/04/14 O. Sallou - Add support for Cassiopee C implementation
+1.6.10: 06/02/14 O. Sallou - Bug fix in search with substitutions
+1.6.9: 20/11/13 O. Sallou - Add windows support for swi-prolog
+                          - fixes on view with begin constraint
+1.6.8: 05/11/13 O. Sallou - Add windows support (external and custom cost functions not available)
+                          - Upgrade Sicstus support to v4.2
+1.6.7: 31/10/13 O. Sallou Bug on multiple model chaining
+1.6.6: 30/10/13 O. Sallou Bug on morphisms and documentation
+1.6.4: 11/10/13 O. Sallou Bug 2243, Bug 2244
+1.6.3: 04/10/13 O. Sallou - Add comments in grammar
+                - Fixes in overlap and distance search
+1.6.2: 24/05/13 O. Sallou - Fix overlap+range usage in repeats
+1.6.1: 13/03/13 O. Sallou - Show number of match per input seq in stdout
+1.6.0: 15/02/13 O. Sallou - Various bug fixes and stability updates
+1.5.0: 21/06/12 O. Sallou - Public release
