@@ -2359,7 +2359,7 @@ public class GrammarTest {
 		 	assumeTrue(is_travis==null);
 			return;
 		}
-		except(Exception e) {
+		catch(Exception e) {
 			assumeFalse(1==1);
 			return;
 		}
