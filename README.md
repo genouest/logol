@@ -7,6 +7,8 @@
 
 Website (http://logol.genouest.org) contains documentation, tutorials and examples.
 
+Previous code repository was: https://gforge.inria.fr/projects/logolexec/
+
 ## Setup
 
 Logol program requires following structure:
