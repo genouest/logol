@@ -1,4 +1,13 @@
+
 # INTRODUCTION 
+
+## About
+
+*Logol* is a pattern matching grammar language and a set of tools to search a pattern in a sequence (nucleic or proteic)
+
+Website (http://logol.genouest.org) contains documentation, tutorials and examples.
+
+## Setup
 
 Logol program requires following structure:
 
