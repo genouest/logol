@@ -13,17 +13,17 @@ Previous code repository was: https://gforge.inria.fr/projects/logolexec/
 
 Logol program requires following structure:
 
--- install directory
-      |
-      -- LogolExec.sh : main execution program
-      |
-      |----- lib   : contains JAR libraries and log property file
-      |
-      |----- prolog : contains templates required for prolog generation as well as shells used during program execution
-      |
-      |----- Doc (optional) : Javadoc and prolog documentation
-      |
-      |----- tools : contains user defined specific cost function programs and logol scripts
+    -- install directory
+          |
+          -- LogolExec.sh : main execution program
+          |
+          |----- lib   : contains JAR libraries and log property file
+          |
+          |----- prolog : contains templates required for prolog generation as well as shells used during program execution
+          |
+          |----- Doc (optional) : Javadoc and prolog documentation
+          |
+          |----- tools : contains user defined specific cost function programs and logol scripts
 
 Logol code is distributed under Affero GPL v3+ license. Libraries licenses are
 included in Doc directory.
