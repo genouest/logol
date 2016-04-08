@@ -21,4 +21,4 @@ before_install:
 
 
 # command to run tests
-script: ant dist_swi
+script: ant test_swi
