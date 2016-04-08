@@ -11,7 +11,7 @@ branches:
 before_install:
   - "sudo apt-get update -qq"
   - "sudo apt-get install -qq ruby ruby-cassiopee gawk swi-prolog junit4 ant ant-optional libncursesw5-dev texlive texlive-latex-extra tex4ht"
-  - "sudo apt-get install -qq libboost-iostreams1.58.0 libboost-regex1.58.0 libboost-serialization1.58.0"
+  - "sudo apt-get install -qq libboost-iostreams1.48.0 libboost-regex1.48.0 libboost-serialization1.48.0"
   - "sudo wget http://ftp.fr.debian.org/debian/pool/main/c/cassiopee/cassiopee_1.0.4+dfsg-1+b1_amd64.deb"
   - "sudo dpkg -i cassiopee_1.0.4+dfsg-1+b1_amd64.deb"
 
