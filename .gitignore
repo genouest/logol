@@ -1,0 +1,8 @@
+patch_jdk8
+**/*.class
+**/*.exe
+lib/LogolExec.jar
+test/tmp/*
+test/results/*
+src/logol.tokens
+src/org/irisa/genouest/logol/parser/*
