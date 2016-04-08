@@ -2360,7 +2360,7 @@ public class GrammarTest {
 			return;
 		}
 		catch(Exception e) {
-			assumeFalse(1==1);
+			assumeTrue(1==0);
 			return;
 		}
 
