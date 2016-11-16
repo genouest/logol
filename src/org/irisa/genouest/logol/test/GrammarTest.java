@@ -2352,7 +2352,16 @@ public class GrammarTest {
 
    	 @Test
    	 public void testRubyCassiopee() {
-   		 init();
+		try {
+ 		 	String is_travis = System.getenv("TRAVIS");
+ 		 	assumeTrue(is_travis==null);
+ 		}
+ 		catch(Exception e) {
+ 			assumeTrue(1==0);
+ 			return;
+ 		}
+
+   		init();
 
  		Vector<String[]> result = new Vector<String[]>();
  		result.add(new String[] {"LogolVAR_1","4","6"});
