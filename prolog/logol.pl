@@ -472,9 +472,11 @@ getCharsFromPosition(Position,N,Z):-Position>=0,N>0->(sequenceData(_,HeaderSize,
 % @param N number fo chars to read
 % @param Word result
 %
+% 09/09/16 O. Sallou - Change way to extract word from file for better performance
 
-getNChar(Stream,N,Z):-getNChar(Stream,[],0,N,Z).
-getNChar(Stream,TmpList,Count,N,Z):-(Count=N,Z=TmpList);(Count<N,get_byte(Stream,B),(((B=(-1);B=10),Z=TmpList);(\+ (B=(-1);B=10),atom_codes(C,[B]),((at_end_of_stream(Stream),append(TmpList,[C],NewTmpList),Z=NewTmpList);(\+ at_end_of_stream(Stream),((C='\n',getNChar(Stream,TmpList,Count,N,Z));(\+C='\n',NewCount is Count + 1,((TmpList=[],getNChar(Stream,[C],NewCount,N,Z));(\+TmpList=[],append(TmpList,[C],NewTmpList),getNChar(Stream,NewTmpList,NewCount,N,Z)))))))))).
+getNChar(Stream,N,Z):-getNChar(Stream,[],0,N,Z1),reverse(Z1,Z).
+%getNChar(Stream,TmpList,Count,N,Z):-(Count=N,Z=TmpList);(Count<N,get_byte(Stream,B),(((B=(-1);B=10),Z=TmpList);(\+ (B=(-1);B=10),atom_codes(C,[B]),((at_end_of_stream(Stream),append(TmpList,[C],NewTmpList),Z=NewTmpList);(\+ at_end_of_stream(Stream),((C='\n',getNChar(Stream,TmpList,Count,N,Z));(\+C='\n',NewCount is Count + 1,((TmpList=[],getNChar(Stream,[C],NewCount,N,Z));(\+TmpList=[],append(TmpList,[C],NewTmpList),getNChar(Stream,NewTmpList,NewCount,N,Z)))))))))).
+getNChar(Stream,TmpList,Count,N,Z):-(Count=N,Z=TmpList);(Count<N,get_byte(Stream,B),(((B=(-1);B=10),Z=TmpList);(\+ (B=(-1);B=10),atom_codes(C,[B]),((at_end_of_stream(Stream),Z=[C|TmpList]);(\+ at_end_of_stream(Stream),((C='\n',getNChar(Stream,TmpList,Count,N,Z));(\+C='\n',NewCount is Count + 1,((TmpList=[],getNChar(Stream,[C],NewCount,N,Z));(\+TmpList=[],getNChar(Stream,[C|TmpList],NewCount,N,Z)))))))))).
 
 
 

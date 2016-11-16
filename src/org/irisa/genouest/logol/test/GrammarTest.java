@@ -2352,17 +2352,6 @@ public class GrammarTest {
 
    	 @Test
    	 public void testRubyCassiopee() {
-
-		// Skip test in Travis
-		try {
-		 	String is_travis = System.getenv("TRAVIS");
-		 	assumeTrue(is_travis==null);
-		}
-		catch(Exception e) {
-			assumeTrue(1==0);
-			return;
-		}
-
    		 init();
 
  		Vector<String[]> result = new Vector<String[]>();
