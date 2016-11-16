@@ -1,3 +1,7 @@
+addons:
+  hosts:
+     - logolhost
+  hostname: logolhost
 language: java
 jdk:
   - "openjdk7"
@@ -16,9 +20,9 @@ before_install:
   - "sudo apt-get install cassiopee"
   - "mkdir test/tmp"
   - "mkdir test/results"
-  - sudo hostname "$(hostname | cut -c1-63)" # Fix for Travis-CI raising Java overflow on hostname, https://github.com/travis-ci/travis-ci/issues/5227
-  - sed -e "s/^\\(127\\.0\\.0\\.1.*\\)/\\1 $(hostname | cut -c1-63)/" /etc/hosts | sudo tee /etc/hosts
-  - cat /etc/hosts # Check hosts content after modification
+#- sudo hostname "$(hostname | cut -c1-63)" # Fix for Travis-CI raising Java overflow on hostname, https://github.com/travis-ci/travis-ci/issues/5227
+#- sed -e "s/^\\(127\\.0\\.0\\.1.*\\)/\\1 $(hostname | cut -c1-63)/" /etc/hosts | sudo tee /etc/hosts
+#- cat /etc/hosts # Check hosts content after modification
 
 
 # command to run tests
