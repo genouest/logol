@@ -1013,7 +1013,8 @@ spacer_withresult([X|Y],Min, Max, Word, Z) :- (((Min=0,NewX=[X|Y]);(Min>0,cut_se
 %spacer_withresult([X|Y],Min, Max, Z, Word) :- N is 0,((Min=0,Z=[X | Y]);(spacer_withresult([X|Y],N,Min,Max,Z,[], Word))).
 
 % sub predicate, do not call directly
-spacer_withresult([], N, Min, Max, Z, Spacer, Word) :- fail.
+%spacer_withresult([], N, Min, Max, Z, Spacer, Word) :- fail.
+spacer_withresult([], N, Min, Max, Z, Spacer, Word) :- Word=Spacer.
 % sub predicate, do not call directly
 %spacer_withresult([X|Y],N, Min, Max, Z, Spacer, Word) :- Ninc is N+1,append(Spacer, [X], IncWord),((Ninc<Max,isalphabet(X), spacer_withresult(Y,Ninc,Min,Max,Z,IncWord, Word));(Ninc>=Min,Z = Y, Word=IncWord)).
 spacer_withresult([X|Y],N, Min, Max, Z, Spacer, Word) :-  (Z = [X |Y], Word=Spacer); (Ninc is N+1,append(Spacer, [X], IncWord),Ninc=<Max, spacer_withresult(Y,Ninc,Min,Max,Z,IncWord, Word)).
@@ -2437,7 +2438,7 @@ notexact_pos( InputPos, Motif , MinSize, MaxSize, Errors, OutPos) :- MinSize=<Ma
 %
 
 between(Min,Max,Value):-between(Min,Min,Max,Value).
-between(Min,Cur,Max,Value):-Cur=<Max,(Value=Cur;Next is Cur + 1,between(Min,Next,Max,Value)).
+between(Min,Cur,Max,Value):-Cur<Max,(Value=Cur;Next is Cur + 1,between(Min,Next,Max,Value)).
 
 
 %% notpred_pos(+Id:int,+InputPos:int,+Pred:goal,+MinSize:int,+MaxSize:int,-OutputPos:list)
