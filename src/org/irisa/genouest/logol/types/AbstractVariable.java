@@ -16,7 +16,7 @@ import org.irisa.genouest.logol.VariableId;
 import org.irisa.genouest.logol.utils.LogolUtils;
 
 /**
- * 
+ *
  * @author osallou
  * History:
  * 01/03/10 @FIX 1578
@@ -26,20 +26,20 @@ import org.irisa.genouest.logol.utils.LogolUtils;
  */
 public abstract class AbstractVariable {
 
-	
+
 	private static final Logger logger = Logger.getLogger(org.irisa.genouest.logol.types.AbstractVariable.class);
-	
+
 	int varID = -1;
 	String prologSentence="";
-	
+
 	public AbstractVariable(int id) {
-		varID = id;		
+		varID = id;
 	}
-	
-	
-	public AbstractVariable() {	
+
+
+	public AbstractVariable() {
 	}
-	
+
 	/**
 	 * Return prolog sentence content
 	 * @return a prolog content
@@ -47,27 +47,27 @@ public abstract class AbstractVariable {
 	public String getProlog() {
 		return prologSentence;
 	}
-	
+
 	/**
 	 * Check if a begin position constraint is applied on this variable
 	 * @param lvar	the current variable
 	 * @param useSpacer decide to use current variable spacers to calculate position. Can be done
 	 * only if begin constraint is check after variable match.
 	 * @return	begin position management string in prolog
-	 * @throws GrammarException 
+	 * @throws GrammarException
 	 */
 	@SuppressWarnings("unchecked")
 	protected int isBeginConstraint(LogolVariable lvar,boolean useSpacer) throws GrammarException {
-		String beginConstraint="";			
-		
-		
+		String beginConstraint="";
+
+
 		Vector<StringConstraint> constraints = lvar.stringConstraints;
 		for(int i=0;i<constraints.size();i++) {
 			StringConstraint constr = (StringConstraint) constraints.get(i);
 			if(constr.type==Constants.BEGINCONSTRAINT) {
-				
+
 				if(lvar.postpone(Constants.BEGINCONSTRAINT,constr)) {break; }
-				
+
 				/* get position constraint and set in return sentence the prolog constraint
 				 * checkPosition(WholeListSize,ListWordMatch, MinCondition,MaxCondition,Spacer)
 				 */
@@ -76,31 +76,31 @@ public abstract class AbstractVariable {
 				beginConstraint += ",";
 				if (constr.neg==true) { beginConstraint +="\\+ "; }
 				beginConstraint += " checkPosition_pos("+Constants.LOGOLVARBEFORE+varID;
-				
+
 
 				Expression expr = new Expression().getExpressionData(min);
 				beginConstraint +=","+expr.variable;
 				prologSentence+=expr.expression;
-				
-				
+
+
 
 				expr = new Expression().getExpressionData(max);
 				beginConstraint +=","+expr.variable;
 				prologSentence+=expr.expression;
-				
+
 				if(useSpacer) {
 					beginConstraint+= ","+Constants.LOGOLVARSPACER+varID+")";
 				}
 				else {
 					beginConstraint+= ",0)";
 				}
-			}			
-		}	
+			}
+		}
 		prologSentence+=beginConstraint;
 		return 0;
 	}
-	
-	
+
+
 	/**
 	 * checks that found match has a min percentage of a defined alphabet
 	 * Fix 1683
@@ -109,48 +109,48 @@ public abstract class AbstractVariable {
 	 */
 	protected int isAlphabetConstraint(LogolVariable lvar) {
 		Vector<StructConstraint> constraints = lvar.structConstraints;
-		
 
-		
+
+
 		for(int i=0;i<constraints.size();i++) {
 			StructConstraint constr = (StructConstraint) constraints.get(i);
 			if(constr.type==Constants.ALPHABETCONSTRAINT) {
 				String alphabet = LogolUtils.getArray(constr.alphabetConstraint);
-				prologSentence+= ",checkAlphabetPercentage("+Constants.LOGOLVARREF+varID+","+alphabet+","+constr.min+")";						
+				prologSentence+= ",checkAlphabetPercentage("+Constants.LOGOLVARREF+varID+","+alphabet+","+constr.min+")";
 				break;
 			}
 		}
-			
+
 		return 0;
 	}
-	
+
 	/**
 	 * Check if an end position constraint is applied on this variable
 	 * @param lvar	the current variable
 	 * @return	status code
-	 * @throws GrammarException 
+	 * @throws GrammarException
 	 */
 	@SuppressWarnings("unchecked")
 	protected int isEndConstraint(LogolVariable lvar) throws GrammarException {
 		String endConstraint="";
-		
+
 		Vector<StringConstraint> constraints = lvar.stringConstraints;
 		for(int i=0;i<constraints.size();i++) {
 			StringConstraint constr = (StringConstraint) constraints.get(i);
 			if(constr.type==Constants.ENDCONSTRAINT) {
-								
+
 				if(lvar.postpone(Constants.ENDCONSTRAINT,constr)) {break; }
-				
+
 				/* get position constraint and set in return sentence the prolog constraint
 				 * checkPosition(WholeListSize,ListWordMatch, MinCondition,MaxCondition,Spacer)
 				 */
-				
-				
+
+
 				String min = constr.min;
 				String max = constr.max;
 				endConstraint += ",";
 				if (constr.neg==true) { endConstraint +="\\+ "; }
-				endConstraint += " checkPosition_pos("+Constants.LOGOLVARAFTER+varID;
+				endConstraint += " checkPosition_pos("+Constants.LOGOLVARAFTER+varID+" - 1";
 
 				Expression expr = new Expression().getExpressionData(min);
 				endConstraint+= "," + expr.variable;
@@ -158,28 +158,28 @@ public abstract class AbstractVariable {
 				expr = new Expression().getExpressionData(max);
 				endConstraint+= "," + expr.variable;
 				prologSentence+=expr.expression;
-				
+
 				// no spacer after match
 				endConstraint+= ",0)";
-				
-				
 
-			}			
-		}		
+
+
+			}
+		}
 		prologSentence+=endConstraint;
 		return 0;
 	}
-	
-	
-	
+
+
+
 	/**
 	 * Manage the constraints for all variables constrained by current variable
 	 * @param lvar
 	 * @return all the predicates to call with appropriate parameters
-	 * @throws GrammarException 
+	 * @throws GrammarException
 	 */
 	protected String managePostponedVariables(LogolVariable lvar) throws GrammarException {
-		
+
 		LogolVariable var =null;
 		String constraints="";
 		Vector<LogolVariable> lvars = new Vector<LogolVariable>();
@@ -197,16 +197,16 @@ public abstract class AbstractVariable {
 	 * Manage all constraints for current variable when postponed
 	 * @param lvars
 	 * @return predicate to call with appropriate parameters
-	 * @throws GrammarException 
+	 * @throws GrammarException
 	 */
 	private String managePostponedVariable(Vector<LogolVariable> lvars, LogolVariable currentlvar) throws GrammarException {
-		
+
 		int constrainedType=-1;
 		// If cost/distance constrained, content will also be constrained, need to know the reference
 		// of original variable data.
 		//int contentReference=-1;
 		String contentReference = null;
-		
+
 		boolean isCostConstrained =false;
 		int costVar=-1;
 		boolean isDistanceConstrained =false;
@@ -220,21 +220,21 @@ public abstract class AbstractVariable {
 		boolean isLengthConstrained =false;
 		int lengthVar=-1;
 		boolean isRepeatConstrained =false;
-		int repeatVar=-1;		
-		
+		int repeatVar=-1;
 
-		
+
+
 		String constraint="";
 		int tmpVarId=-1;
 		StringConstraint constr=null;
-		
+
 		String motif="";
 		String prevmatch="";
-		
+
 		boolean percent=false;
-		
+
 		LogolVariable lvar=null;
-		
+
 		for(int i=0;i<lvars.size();i++) {
 			lvar = (LogolVariable) lvars.get(i);
 			if(lvar.hasConstraint(Constants.CONTENTCONSTRAINT)) { isContentConstrained=true; contentVar=i; }
@@ -245,7 +245,7 @@ public abstract class AbstractVariable {
 			if(lvar.hasConstraint(Constants.DISTANCECONSTRAINT) || lvar.hasConstraint(Constants.PERCENTDISTANCECONSTRAINT)) { isDistanceConstrained=true; distanceVar=i; }
 			if(lvar.hasConstraint(Constants.REPEATCONSTRAINT)) { isRepeatConstrained=true; repeatVar=i; }
 		}
-		
+
 		if(isLengthConstrained) {
 			constrainedType = Constants.LENGTHCONSTRAINT;
 			constraint+=",(";
@@ -255,13 +255,13 @@ public abstract class AbstractVariable {
 			logger.debug("now manage length constraint of "+lvar.model+":"+lvar.id+" at variable "+currentlvar.model+":"+currentlvar.id);
 			String word = LogolUtils.getTemporaryVariable();
 			constraint+= "getVariable("+Constants.LOGOLVARREF+lvar.id+",_,_,_,"+word+",_,_,_,_)";
-			
-		
-			constr = lvar.getStringConstraint(Constants.LENGTHCONSTRAINT);	
-			
-			String min = constr.min;			
+
+
+			constr = lvar.getStringConstraint(Constants.LENGTHCONSTRAINT);
+
+			String min = constr.min;
 			String max = constr.max;
-			
+
 			Expression exp = new Expression().getExpressionData(min);
 			min = exp.variable;
 			if(exp.expression!=null) {
@@ -272,29 +272,29 @@ public abstract class AbstractVariable {
 			if(exp.expression!=null) {
 				constraint+=exp.expression;
 			}
-			
+
 			if(lvar.getOptimalConstraint()==Constants.OPTIMAL_CONSTRAINT.OPTIMAL_LENGTH) {
 				Treatment.setOptimalConstraint(true);
 			}
-			
+
 			constraint += ",";
 			if (constr.neg==true) { constraint +="\\+ ("; }
 			constraint += word+">="+min;
 			constraint += ","+word+"=<"+max;
-			
-			
+
+
 			// no spacer after match
 			constraint+= ")";
 			constraint+=")";
-			
+
 		}
-		
-		
-		//getVariable(R,Content,Begin,End,Size,Info,Level,Errors,Name)				
+
+
+		//getVariable(R,Content,Begin,End,Size,Info,Level,Errors,Name)
 		if(isBeginConstrained || isEndConstrained) {
-			
+
 			String t_position =LogolUtils.getTemporaryVariable();
-			
+
 			constraint+=",(";
 			if(isBeginConstrained) {
 				constrainedType = Constants.BEGINCONSTRAINT;
@@ -305,7 +305,7 @@ public abstract class AbstractVariable {
 				constraint+= "getVariable("+Constants.LOGOLVARREF+lvar.id+",_,"+t_position+",_,_,_,_,_,_)";
 				constr = lvar.getStringConstraint(Constants.BEGINCONSTRAINT);
 				}
-			else { 
+			else {
 				constrainedType = Constants.ENDCONSTRAINT;
 				lvar = (LogolVariable) lvars.get(endVar);
 				//contentReference = Integer.valueOf(lvar.referenceID);
@@ -313,42 +313,42 @@ public abstract class AbstractVariable {
 				logger.debug("now manage end constraint of "+lvar.model+":"+lvar.id+" at variable "+currentlvar.model+":"+currentlvar.id);
 				constraint+= "getVariable("+Constants.LOGOLVARREF+lvar.id+",_,_,"+t_position+",_,_,_,_,_)";
 				constr = lvar.getStringConstraint(Constants.ENDCONSTRAINT);
-				}	
-			
+				}
+
 			String min = constr.min;
 			String max = constr.max;
-			
-			
+
+
 			Expression exprMin = new Expression().getExpressionData(min);
-			
+
 			constraint+=exprMin.expression;
 			Expression exprMax = new Expression().getExpressionData(max);
-			
+
 			constraint+=exprMax.expression;
-			
+
 			constraint += ",";
-			
-			if (constr.neg==true) { constraint +="\\+ "; }	
+
+			if (constr.neg==true) { constraint +="\\+ "; }
 			// Take begin or end value (without offset) and compare
 			constraint += " checkPosition("+t_position;
 
 			constraint+=","+ exprMin.variable;
-			
-			constraint+=","+ exprMax.variable;
-			
 
-			
+			constraint+=","+ exprMax.variable;
+
+
+
 			// no spacer after match
 			constraint+= ")";
 			constraint+=")";
-			
+
 		}
-		
+
 		if(isRepeatConstrained) {
 			constraint+=",(";
 			// get INFO, compare number of elements
 			String infoData = LogolUtils.getTemporaryVariable();
-			constraint+= "getVariable("+Constants.LOGOLVARREF+lvar.id+",_,_,_,_,"+infoData+",_,_,_)";			
+			constraint+= "getVariable("+Constants.LOGOLVARREF+lvar.id+",_,_,_,_,"+infoData+",_,_,_)";
 			lvar = (LogolVariable) lvars.get(repeatVar);
 			//contentReference = Integer.valueOf(lvar.referenceID);
 			contentReference = lvar.referenceID;
@@ -361,13 +361,13 @@ public abstract class AbstractVariable {
 			if(!maxExpr.expression.equals(Constants.EMPTYSTRING)) {
 				constraint+=maxExpr.expression;
 			}
-			String repeatQuantity = LogolUtils.getTemporaryVariable();		
+			String repeatQuantity = LogolUtils.getTemporaryVariable();
 			constraint+=",length("+infoData+","+repeatQuantity+")";
 			constraint+=","+repeatQuantity+">="+minExpr.variable;
 			constraint+=","+repeatQuantity+"=<"+maxExpr.variable;
 			constraint+=")";
 		}
-		
+
 		// If there is a constraint on content (and possibly cost/distance)
 		if(isContentConstrained) {
 			// If there is a cost/distance constraint, there will be whatever a content constraint
@@ -375,13 +375,13 @@ public abstract class AbstractVariable {
 			constraint+=",(";
 			//int reference=-1;
 			String reference=null;
-			
+
 			lvar = (LogolVariable) lvars.get(contentVar);
 			prevmatch = LogolUtils.getTemporaryVariable();
-			logger.debug("now manage content constraint of "+lvar.model+":"+lvar.id+" at variable "+currentlvar.model+":"+currentlvar.id);			
+			logger.debug("now manage content constraint of "+lvar.model+":"+lvar.id+" at variable "+currentlvar.model+":"+currentlvar.id);
 			// Get data saved at variable time analysis
 			constraint+= "getVariable("+Constants.LOGOLVARREF+lvar.id+","+prevmatch+",_,_,_,_,_,_,_)";
-			
+
 			// Get content constraint
 			constr = lvar.getStringConstraint(Constants.CONTENTCONSTRAINT);
 			String name = null;
@@ -393,14 +393,14 @@ public abstract class AbstractVariable {
 			if(name!=null) {
 			//reference = Integer.parseInt(name);
 			reference = name;
-			
+
 			contentReference = reference;
 			logger.debug("reference of constraint = "+reference+", current is "+currentlvar.id);
 			}
 			// Get referenced variable content
 			motif = LogolUtils.getTemporaryVariable();
 			constraint+= ",getVariable("+Constants.LOGOLVARREF+reference+","+motif+",_,_,_,_,_,_,_)";
-					
+
 			}
 			// it was a fixed content e.g. "acgt"
 			if(constr.contentConstraint!=null) {
@@ -408,12 +408,12 @@ public abstract class AbstractVariable {
 				//contentReference = Integer.valueOf(lvar.referenceID);
 				contentReference = lvar.referenceID;
 			}
-			
-			
+
+
 			// If modifier present, apply it on content
-			if(lvar.modifier!=null)	{	
-				
-				Expression lv_modExpr = applyModifier(lvar,motif); 
+			if(lvar.modifier!=null)	{
+
+				Expression lv_modExpr = applyModifier(lvar,motif);
 				motif = lv_modExpr.variable;
 				constraint += ","+lv_modExpr.expression;
 
@@ -440,10 +440,10 @@ public abstract class AbstractVariable {
 					}
 
 				constraint += ",isexactwitherroronly("+prevmatch+","+motif+","+ maxCost+",_,FullExact),FullExact=[]";
-				
-				
+
+
 			}
-			if(isDistanceConstrained && !isCostConstrained) {				
+			if(isDistanceConstrained && !isCostConstrained) {
 				// FIXME other variables cannot refer to distance because it is not saved (not yet tested). Could update content and used after....
 				LogolVariable tmpVar = (LogolVariable) lvars.get(distanceVar);
 				StructConstraint stc = tmpVar.getStructConstraint(Constants.DISTANCECONSTRAINT);
@@ -460,7 +460,7 @@ public abstract class AbstractVariable {
 				//constraint += "isexactwithgapanderror("+prevmatch+","+motif+","+ maxDistance+",Errors,Queue),length(Queue,QueueLength),RemainingErrors is "+maxDistance+" - Errors,QueueLength=<RemainingErrors";
 				constraint += ",isexactwithgaponly("+prevmatch+","+motif+","+ maxDistance+",Errors,Queue),length(Queue,QueueLength),RemainingErrors is "+maxDistance+" - Errors,QueueLength=<RemainingErrors";
 			}
-			if(isDistanceConstrained && isCostConstrained) {				
+			if(isDistanceConstrained && isCostConstrained) {
 				// FIXME other variables cannot refer to distance because it is not saved (not yet tested). Could update content and used after....
 				LogolVariable tmpVar = (LogolVariable) lvars.get(distanceVar);
 				StructConstraint stc = tmpVar.getStructConstraint(Constants.DISTANCECONSTRAINT);
@@ -484,37 +484,37 @@ public abstract class AbstractVariable {
 					String tmp_maxCost = LogolUtils.getTemporaryVariable();
 					constraint+=",percent2int("+motif+","+tmp_maxCost+","+maxCost+")";
 					maxCost=tmp_maxCost;
-					}				
+					}
 				//isexactwithdistinctgapanderror([X|Y],[E1 | E2], N, NDist, MaxError, MaxDistance, Errors, DistanceErrors, Z)
 				constraint+=",isexactwithdistinctgapanderror("+prevmatch+","+motif+", "+maxCost+", "+maxDistance+", Errors, DistanceErrors, Queue),length(Queue,QueueLength),RemainingErrors is "+maxDistance+" - (Errors + DistanceErrors),QueueLength=<RemainingErrors";
 			}
 
 			constraint+=")";
-			
+
 		}
 		else {
 		if(isCostConstrained) {
 			/* Cost contrainted but not content constrained, means it is a user specific cost function.
 			 * We only want to look at previous match and apply specific function based on cost parameter.
-			 * 
+			 *
 			 */
 			// If there is a cost/distance constraint, there will be whatever a content constraint
-			
+
 			constraint+=",(";
 			//int reference=-1;
 			String reference=null;
 			lvar = (LogolVariable) lvars.get(costVar);
 			//contentReference = Integer.valueOf(lvar.referenceID);
 			contentReference = lvar.referenceID;
-			logger.debug("now manage cost constraint of "+lvar.model+":"+lvar.id+" at variable "+currentlvar.model+":"+currentlvar.id);			
+			logger.debug("now manage cost constraint of "+lvar.model+":"+lvar.id+" at variable "+currentlvar.model+":"+currentlvar.id);
 			// Get data saved at variable time analysis
 			prevmatch = LogolUtils.getTemporaryVariable();
 			constraint+= "getVariable("+Constants.LOGOLVARREF+lvar.id+","+prevmatch+",_,_,_,_,_,_,_)";
-			
+
 
 				StructConstraint stc = lvar.getStructConstraint(Constants.COSTCONSTRAINT);
 				if(stc == null) { stc = lvar.getStructConstraint(Constants.PERCENTCOSTCONSTRAINT); percent=true; }
-				
+
 				Expression expr = new Expression().getExpressionData(stc.max);
 				String maxCost =  expr.variable;
 				prologSentence+=expr.expression;
@@ -523,17 +523,17 @@ public abstract class AbstractVariable {
 					constraint+=",percent2int("+motif+","+tmp_maxCost+","+maxCost+")";
 					maxCost=tmp_maxCost;
 					}
-				
+
 				// User defined cost function, no comparison with previous match, just check sequence.
 				constraint += ",myCost('"+stc.name+"',"+prevmatch+","+maxCost+",_)";
-	
+
 				constraint+=")";
 		}
-			
-			
+
+
 		}
-		
-		
+
+
 		// This is a parent content constraint
 		/* FIXME parent content constraint NOT SUPPORTED FOR THE MOMENT
 		if(!isContentConstrained && isCostConstrained) {
@@ -544,97 +544,97 @@ public abstract class AbstractVariable {
 			int resultId;
 			int parentId;
 			int reference=-1;
-	
+
 			lvar = (LogolVariable) lvars.get(costVar);
 			StructConstraint stc = lvar.getStructConstraint(COSTCONSTRAINT);
 			if(stc == null) { stc = lvar.getStructConstraint(PERCENTCOSTCONSTRAINT); percent=true; }
-			String maxCost =getExpressionData(stc.max);			
-			
+			String maxCost =getExpressionData(stc.max);
+
 			String name = (String) LogolVariable.parentVariables.get(new VariableId(lvar.name,lvar.model));
 			if(name!=null) {
 			reference = Integer.parseInt(name);
 			parentRef=reference;
 			}
-			
-			
+
+
 			// If parent not yet known
 			constraint+= "((\\+var("+LOGOLVARPARENTREF+reference+")";
-			
+
 			constraint+= "getVariableByRef("+LOGOLVARREF+lvar.id+","+LOGOLVARTMP+varCounter+",_,_,_,_,_,_,_)";
-			currentId=varCounter;			
+			currentId=varCounter;
 			varCounter++;
 			constraint+= "getVariableByRef("+LOGOLVARPARENTREF+reference+","+LOGOLVARTMP+varCounter+",_,_,_,_,_,_,_)";
-			parentId=varCounter;			
-			varCounter++;			
+			parentId=varCounter;
+			varCounter++;
 			if(percent) {
 				constraint+=",percent2int("+LOGOLVARTMP+currentId+","+LOGOLVARTMP+varCounter+","+maxCost+")";
 				maxCost=LOGOLVARTMP+varCounter;
 				varCounter++;
 				}
-			constraint += "isexactwitherroronly("+LOGOLVARTMP+currentId+","+LOGOLVARTMP+parentId+","+ maxCost+",_,_)";			
-			
-			
+			constraint += "isexactwitherroronly("+LOGOLVARTMP+currentId+","+LOGOLVARTMP+parentId+","+ maxCost+",_,_)";
+
+
 			constraint+=")";
 			// If parent is still unknown, save all variations
 			constraint+= ";(var("+LOGOLVARPARENTREF+lvar.id+")";
-	
+
 			constraint+= ",getVariableByRef("+LOGOLVARREF+lvar.id+","+LOGOLVARTMP+varCounter+",_,_,_,_,_,_,_)";
 			currentId=varCounter;
 			varCounter++;
-					
+
 			if(percent){
 				constraint+=",percent2int("+LOGOLVARTMP+","+LOGOLVARTMP+currentId+","+maxCost+")";
 				maxCost=LOGOLVARTMP+varCounter;
-				varCounter++;	
-				}															
-			
+				varCounter++;
+				}
+
 			constraint +=",parentalCost(substitution,"+LOGOLVARTMP + currentId+","+ LOGOLVARTMP + varCounter+","+maxCost+")";
 			resultId = varCounter;
 			varCounter++;
 			constraint +=",assert(varDefinition("+LOGOLVARPARENT+lvar.id+","+LOGOLVARTMP+resultId+",_,_,_, _, _, _),"+LOGOLVARPARENTREF+lvar.id+")";
-			
+
 			constraint+="))";
-			
-			
+
+
 		}
 		*/
-		
+
 		String postponedVariables = LogolVariable.getPostponedVariableList(currentlvar.model);
-		
+
 		//create a predicate and call it.
 		// Get all postponed variables for this model
 		//String callPredicate = ",append(PostponedVariables,"+postponedVariables+","+Constants.LOGOLVARTMP+varCounter+"),"+Constants.LOGOLVARPOSTPONEPRED+predCount+"("+Constants.LOGOLVARTMP+varCounter+","+Constants.LOGOLVARREF+lvar.id;
 		String t_postponedvar = LogolUtils.getTemporaryVariable();
 		String t_postponedPred = LogolUtils.getPostponedPredicateVariable();
 		String callPredicate = ",append(PostponedVariables,"+postponedVariables+","+t_postponedvar+"),"+t_postponedPred+"("+t_postponedvar;
-		
+
 		//String predicate = Constants.LOGOLVARPOSTPONEPRED+predCount+"(PostponedVariables,"+Constants.LOGOLVARREF+lvar.id;
 		String predicate = t_postponedPred+"(PostponedVariables";
-		
+
 		predicate+="):- is4me(PostponedVariables,"+lvar.id+","+constrainedType+","+Constants.LOGOLVARREF+lvar.id+","+Constants.LOGOLVARREF+contentReference+")"+constraint+".";
-		
+
 		callPredicate+=")";
 		ViewVariable.predicates.add(predicate);
-		
+
 		return callPredicate;
-	}		
-	
-	
-	
-	
-	
+	}
+
+
+
+
+
 	/**
 	 * Apply a modifier on variable
 	 * @param lvar LogolVariable containing the modifier information
 	 * @param motif string to transform (fixed or from a previous variable)
 	 * @return	Expression with variable reference to use after transformation, and required expressions to set before
 	 */
-	protected Expression applyModifier(LogolVariable lvar,String motif) {		
+	protected Expression applyModifier(LogolVariable lvar,String motif) {
 		Modifier mod = lvar.modifier;
 		Expression expr = new Expression();
 		String lv_sentence = "";
 		String newmotif="";
-		
+
 		String modifierName = mod.modifierName.replaceAll("\"", "'");
 		if(modifierName.equals("'wc'")) {
 			//If rna or protein, apply different predefined morphism
@@ -642,61 +642,61 @@ public abstract class AbstractVariable {
 			if(Treatment.dataType==Constants.PROTEIN) { modifierName = "'wcprot'"; logger.debug("Apply wc on protein"); }
 			if(Treatment.dataType==Constants.DNA) { modifierName = "'wcdna'"; logger.debug("Apply wc on dna"); }
 		}
-		
+
 		if(modifierName.equals("'reverse'")) {
 			// This is a reverse only, sign is not taken into account
 			newmotif = LogolUtils.getTemporaryVariable();
 			lv_sentence+="reverse("+motif+","+newmotif+")";
-			
-			
+
+
 			expr.variable=newmotif;
 			expr.expression=lv_sentence;
-			
+
 			return expr;
 		}
-		
-		
+
+
 		newmotif = LogolUtils.getTemporaryVariable();
 		//System.out.println("#DEBUG: apply modifier "+modifierName+" with operator "+mod.type);
-		if(mod.type==Modifier.MODIFIERMORPHMINUS) {			
-			lv_sentence+="applymorphism("+motif+","+modifierName+",1,"+newmotif+")";				
+		if(mod.type==Modifier.MODIFIERMORPHMINUS) {
+			lv_sentence+="applymorphism("+motif+","+modifierName+",1,"+newmotif+")";
 		}
 		if(mod.type==Modifier.MODIFIERMORPHPLUS) {
-			lv_sentence+="applymorphism("+motif+","+modifierName+",0,"+newmotif+")";	
+			lv_sentence+="applymorphism("+motif+","+modifierName+",0,"+newmotif+")";
 		}
-		
+
 		expr.variable=newmotif;
 		expr.expression=lv_sentence;
-		
+
 		return expr;
 	}
-	
-	
+
+
 	/**
 	 * Evaluates prolog to create when some content constraints are postponed for current variable
 	 * @param model current model
 	 * @param inMin minimum length
 	 * @param inMax maximum length
-	 */	
+	 */
 	protected void manageContentPostponed(String model, String inMin, String inMax) {
-		
+
 		String min = inMin;
 		String max = inMax;
-		
+
 		// check if constraining var is fixed content or has length constraint
 		// REMARK Issue:   (X:#3:_SX | X:#8:_SX)  both have same var id but different constraints, cannot manage content
 		// count number of ref, if one only take data, if other, do not take into account
 		LogolVariable constrainedVar = LogolVariable.varData.get(String.valueOf(varID));
-		VariableId var = LogolVariable.constrainedVariables.get(new VariableId(model,String.valueOf(varID),String.valueOf(Constants.CONTENTCONSTRAINT)));		
+		VariableId var = LogolVariable.constrainedVariables.get(new VariableId(model,String.valueOf(varID),String.valueOf(Constants.CONTENTCONSTRAINT)));
 		LogolVariable constrainingVar = LogolVariable.varData.get(var.name);
-		
+
 		// If no length constraint, try to find some other constraints that could impact length
 		if(min.equals(String.valueOf(Treatment.minLength))&& max.equals(String.valueOf(Treatment.maxLength))) {
 			// constraining var is defined by a fixed content
 			if(constrainingVar.fixedValue!=null) {
-		
+
 					// If current var has a distance constraint, need to take it into account to define max length
-					if(constrainingVar.hasConstraint(Constants.DISTANCECONSTRAINT) || constrainingVar.hasConstraint(Constants.PERCENTDISTANCECONSTRAINT) || constrainedVar.hasConstraint(Constants.DISTANCECONSTRAINT) || constrainedVar.hasConstraint(Constants.PERCENTDISTANCECONSTRAINT)) 
+					if(constrainingVar.hasConstraint(Constants.DISTANCECONSTRAINT) || constrainingVar.hasConstraint(Constants.PERCENTDISTANCECONSTRAINT) || constrainedVar.hasConstraint(Constants.DISTANCECONSTRAINT) || constrainedVar.hasConstraint(Constants.PERCENTDISTANCECONSTRAINT))
 					{
 						StructConstraint str = constrainedVar.getStructConstraint(Constants.DISTANCECONSTRAINT);
 						if(str==null) {
@@ -707,7 +707,7 @@ public abstract class AbstractVariable {
 							max=String.valueOf(constrainingVar.fixedValue.length()-2+Integer.parseInt(str.max));
 						}
 						else {
-							// If max distance is a variable reference, var may not be known at this time, 
+							// If max distance is a variable reference, var may not be known at this time,
 							// use computation defaults e.g. size * 2 (100% of distance, configurable).
 							max=String.valueOf(Math.round((constrainingVar.fixedValue.length()-2)*Treatment.DEFAULTMAXDISTANCE));
 						}
@@ -732,8 +732,8 @@ public abstract class AbstractVariable {
 						min=String.valueOf(constrainingVar.fixedValue.length()-2);
 						max=String.valueOf(constrainingVar.fixedValue.length()-2);
 					}
-				
-				
+
+
 			}
 			if(constrainingVar.name!=null) {
 				// has length constraint?
@@ -758,27 +758,27 @@ public abstract class AbstractVariable {
 						// If max length is a variable reference, var may not be known at this time,
 						// use maxLength
 						max=String.valueOf(Treatment.maxLength);
-					}	
+					}
 				}
 				}
-				
+
 			}
-		
+
 		}
 		// end of treatment if no length constraint
-		
+
 		if(Treatment.isAny>-1) {
 			String t_spacerResult = LogolUtils.getTemporaryVariable();
 			String SpacerPredicate = "spacer_withresult_pos(0,"+min+","+max+","+ t_spacerResult +","+Constants.LOGOLVARAFTER+varID+")";
-			
+
 			String spacerMin="0";
 			String spacerMax= Integer.toString(Treatment.maxSpacerLength);
-			
+
 			if(Treatment.saveAny==false) {
 				// For "first" variables, we search with infinite gap e.g. max sequence size
 				spacerMax = Integer.toString(Treatment.sequenceLength);
 			}
-			
+
 			// Specify min and max size of spacer to shorten the analysis, if defined.
 			if(!Constants.EMPTYSTRING.equals(Treatment.isAnyMin)) { spacerMin = Treatment.isAnyMin; }
 			if(!Constants.EMPTYSTRING.equals(Treatment.isAnyMax) && !Constants.SEQUENCELength.equals(Treatment.isAnyMax)) { spacerMax = Treatment.isAnyMax; }
@@ -786,7 +786,7 @@ public abstract class AbstractVariable {
 				//spacerMax = LogolUtils.getTemporaryVariable();
 				//prologSentence += ",length("+Constants.LOGOLVARBEFORE+varID+","+spacerMax+")";
 			}
-			
+
 			prologSentence += ",anySpacer_pos("+Constants.LOGOLVARBEFORE+varID+","+Constants.LOGOLVARAFTER+varID+","+SpacerPredicate+",1,"+spacerMin+","+spacerMax+","+Constants.LOGOLVARSPACER+varID+")";
 			prologSentence += ","+Constants.LOGOLVARERRORS+varID+"=0";
 			prologSentence += ","+Constants.LOGOLVARINDEL+varID+"=0";
@@ -794,16 +794,16 @@ public abstract class AbstractVariable {
 		else {
 			String t_spacerResult = LogolUtils.getTemporaryVariable();
 			prologSentence += ",spacer_withresult_pos("+Constants.LOGOLVARBEFORE+varID+","+min+","+max+","+ t_spacerResult +","+Constants.LOGOLVARAFTER+varID+")";
-			
-			prologSentence += ","+Constants.LOGOLVARSPACER+varID+"=0"; 
+
+			prologSentence += ","+Constants.LOGOLVARSPACER+varID+"=0";
 			prologSentence += ","+Constants.LOGOLVARERRORS+varID+"=0";
 			prologSentence += ","+Constants.LOGOLVARINDEL+varID+"=0";
 		}
-		
+
 		prologSentence+=","+Constants.LOGOLVARINFO+varID+"=[]";
-		
+
 	}
-	
+
 	/**
 	 * Evaluates prolog to create when some structures constraints are postponed for current variable
 	 * @param currentlvar current variable begin analysed
@@ -819,12 +819,12 @@ public abstract class AbstractVariable {
 		// Content is not constrained, and this is not a parent, so content is known.
 		// We can deduce its length
 		// if cost, use length  of word content as max and min
-		// if distance, use size of word * 2 as max	
+		// if distance, use size of word * 2 as max
 
 		if(currentlvar.fixedValue!=null) {
 		if(min.equals(Integer.toString(Treatment.minLength))) {
 			if(!Constants.EMPTYSTRING.equals(distance)) {
-				min=Long.toString(Math.round((currentlvar.fixedValue.length()-2)*Treatment.DEFAULTMAXDISTANCE));	
+				min=Long.toString(Math.round((currentlvar.fixedValue.length()-2)*Treatment.DEFAULTMAXDISTANCE));
 			}
 			else {
 			min=Integer.toString(currentlvar.fixedValue.length()-2);
@@ -832,7 +832,7 @@ public abstract class AbstractVariable {
 		}
 		if(max.equals(Integer.toString(Treatment.maxLength))) {
 			if(!Constants.EMPTYSTRING.equals(distance)) {
-				max=Long.toString(Math.round((currentlvar.fixedValue.length()-2)*Treatment.DEFAULTMAXDISTANCE));	
+				max=Long.toString(Math.round((currentlvar.fixedValue.length()-2)*Treatment.DEFAULTMAXDISTANCE));
 			}
 			else {
 			max=Integer.toString(currentlvar.fixedValue.length()-2);
@@ -850,8 +850,8 @@ public abstract class AbstractVariable {
 			if(name!=null) {
 			//reference = Integer.parseInt(name);
 				reference = name;
-			}			
-			
+			}
+
 			String t_size = LogolUtils.getTemporaryVariable();
 			// Get size of referenced variable
 			prologSentence+= ",getVariable("+Constants.LOGOLVARREF+reference+",_,_,_,"+t_size+",_,_,_,_)";
@@ -861,7 +861,7 @@ public abstract class AbstractVariable {
 				if(!Constants.EMPTYSTRING.equals(distance)) {
 					String t_newmin = LogolUtils.getTemporaryVariable();
 					prologSentence+=","+t_newmin+" is "+min+" * 2";
-					min=t_newmin;					
+					min=t_newmin;
 				}
 			}
 			if(max.equals(Integer.toString(Treatment.maxLength))) {
@@ -870,26 +870,26 @@ public abstract class AbstractVariable {
 				if(!Constants.EMPTYSTRING.equals(distance)) {
 					String t_newmax = LogolUtils.getTemporaryVariable();
 					prologSentence+=","+t_newmax+" is "+max+" * 2";
-					max=t_newmax;					
+					max=t_newmax;
 				}
-			}	
-			
+			}
 
-			
+
+
 		}
 
 		if(Treatment.isAny>-1) {
 			String t_spacer = LogolUtils.getTemporaryVariable();
 			String SpacerPredicate = "spacer_withresult_pos(0,"+min+","+max+","+ t_spacer +","+Constants.LOGOLVARAFTER+varID+")";
-			
+
 			String spacerMin="0";
 			String spacerMax= Integer.toString(Treatment.maxSpacerLength);
-			
+
 			if(Treatment.saveAny==false) {
 				// For "first" variables, we search with infinite gap e.g. max sequence size
 				spacerMax = Integer.toString(Treatment.sequenceLength);
 			}
-			
+
 			// Specify min and max size of spacer to shorten the analysis, if defined.
 			if(!Constants.EMPTYSTRING.equals(Treatment.isAnyMin)) { spacerMin = Treatment.isAnyMin; }
 			if(!Constants.EMPTYSTRING.equals(Treatment.isAnyMax) && !Constants.SEQUENCELength.equals(Treatment.isAnyMax)) { spacerMax = Treatment.isAnyMax; }
@@ -897,25 +897,25 @@ public abstract class AbstractVariable {
 				//spacerMax = LogolUtils.getTemporaryVariable();
 				//prologSentence += ",length("+Constants.LOGOLVARBEFORE+varID+","+spacerMax+")";
 			}
-			
+
 			prologSentence += ",anySpacer_pos("+Constants.LOGOLVARBEFORE+varID+","+Constants.LOGOLVARAFTER+varID+","+SpacerPredicate+",1,"+spacerMin+","+spacerMax+","+Constants.LOGOLVARSPACER+varID+")";
 			prologSentence += ","+Constants.LOGOLVARERRORS+varID+"=0";
 			prologSentence += ","+Constants.LOGOLVARINDEL+varID+"=0";
 		}
 		else {
 			String t_spacer = LogolUtils.getTemporaryVariable();
-			prologSentence += ",spacer_withresult_pos("+Constants.LOGOLVARBEFORE+varID+","+min+","+max+","+ t_spacer +","+Constants.LOGOLVARAFTER+varID+")";		
-			prologSentence += ","+Constants.LOGOLVARSPACER+varID+"=0"; 
+			prologSentence += ",spacer_withresult_pos("+Constants.LOGOLVARBEFORE+varID+","+min+","+max+","+ t_spacer +","+Constants.LOGOLVARAFTER+varID+")";
+			prologSentence += ","+Constants.LOGOLVARSPACER+varID+"=0";
 			prologSentence += ","+Constants.LOGOLVARERRORS+varID+"=0";
 			prologSentence += ","+Constants.LOGOLVARINDEL+varID+"=0";
 		}
-		
-		prologSentence+=","+Constants.LOGOLVARINFO+varID+"=[]";		
-		
-		
-		
+
+		prologSentence+=","+Constants.LOGOLVARINFO+varID+"=[]";
+
+
+
 	}
-	
+
 	/**
 	 * Call a built-in predicate to search for a specifci pattern
 	 * @param lvar variable to analyse
@@ -946,11 +946,11 @@ public abstract class AbstractVariable {
 				else {
 					// This is a variable search for variable referece
 					int inputreference = -1;
-					if(LogolVariable.userVariables.get(new VariableId(input,Treatment.currentModel.name))!=null) 		
+					if(LogolVariable.userVariables.get(new VariableId(input,Treatment.currentModel.name))!=null)
 					{ inputreference= Integer.parseInt((String)LogolVariable.userVariables.get(new VariableId(input,Treatment.currentModel.name))); }
-					if(LogolVariable.paramVariables.get(new VariableId(input,Treatment.currentModel.name))!=null) 		
+					if(LogolVariable.paramVariables.get(new VariableId(input,Treatment.currentModel.name))!=null)
 					{ inputreference= Integer.parseInt((String)LogolVariable.paramVariables.get(new VariableId(input,Treatment.currentModel.name))); }
-					
+
 					if(inputreference==-1) {
 						throw new GrammarException("Referenced variable could not be found, check variable exist.");
 					}
@@ -967,17 +967,17 @@ public abstract class AbstractVariable {
 				else {
 					// This is a variable search for variable referece
 					int inputreference = -1;
-					if(LogolVariable.userVariables.get(new VariableId(output,Treatment.currentModel.name))!=null) 		
+					if(LogolVariable.userVariables.get(new VariableId(output,Treatment.currentModel.name))!=null)
 					{ inputreference= Integer.parseInt((String)LogolVariable.userVariables.get(new VariableId(output,Treatment.currentModel.name))); }
-					if(LogolVariable.paramVariables.get(new VariableId(output,Treatment.currentModel.name))!=null) 		
+					if(LogolVariable.paramVariables.get(new VariableId(output,Treatment.currentModel.name))!=null)
 					{ inputreference= Integer.parseInt((String)LogolVariable.paramVariables.get(new VariableId(output,Treatment.currentModel.name))); }
-					
+
 					if(inputreference==-1) {
 						throw new GrammarException("Referenced variable could not be found, check variable exist.");
 					}
 					externalSentence+=","+Constants.LOGOLVARREF+inputreference;
 				}
-			}					
+			}
 			externalSentence +=Constants.LOGOLVARSPACER+varID+", "+Constants.LOGOLVARERRORS+varID+", "+Constants.LOGOLVARINDEL+varID+", "+Constants.LOGOLVARAFTER+varID;
 			externalSentence +="]";
 			externalSentence+=")";
@@ -985,5 +985,5 @@ public abstract class AbstractVariable {
 		else throw new GrammarException("Error, this variable do not use external predicate: "+lvar.name);
 		return externalSentence;
 	}
-	
+
 }

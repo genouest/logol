@@ -2,21 +2,21 @@
 <project name="LogolMatch" basedir="." default="create-jar">
 
 	<property environment="env" />
-	
-	<!-- needed properties: 
+
+	<!-- needed properties:
 			prolog=sicstus or swipl
 			vmatch_path= /softs/local/vmatch/vmatch.distribution/ (your path to vmatch if available)
 			cassiopee_path=/softs/local/cassiopee/current/
-            target.dir=/path_where_files_should_be_installed			
+            target.dir=/path_where_files_should_be_installed
 	 -->
 
-	<property name="version" value="1.7.5" />
+	<property name="version" value="1.7.6" />
 
 	<condition property="ruby_path" value="${env.RUBY_PATH}"
 		else="">
 		<isset property="env.RUBY_PATH" />
-	</condition>	
-	
+	</condition>
+
 	<!-- Cobertura code coverage -->
 	<condition property="cobertura.dir" value="${env.COBERTURA}"
 		else="/tmp">
@@ -154,7 +154,7 @@
 			<sysproperty key="prolog" value="swipl" />
 			<sysproperty key="ruby_path" value="${ruby_path}"/>
 
-			
+
 			<formatter type="brief" usefile="false" />
 			<formatter type="xml" usefile="true" />
 			<test name="org.irisa.genouest.logol.test.GrammarTest" todir="${work.dir}" outfile="SwiLogolSelfTest-${build.nb}" />
@@ -249,15 +249,15 @@
 		<copy file="${work.dir}/coverage.xml" todir="${basedir}" />
 	</target>
 
-	
+
 	<target name="test_sicstus" description="Self integration test"
 		depends="setup,compile_sicstus_exe,create-jar">
-		
+
 		<!-- prolog unit tests using punit framework -->
 		<exec executable="${sicstus.dir}sicstus">
 			<arg line=" -l ${basedir}/prolog/unitTest/sampleUnit.pro -a fakefile fakefile ${work.dir}/LogolSelfTest-PUnit-${build.nb}.xml ${basedir}/prolog/unitTest/plunittest.pro ${basedir}/prolog/logol.pl ${basedir}/test/test.fasta" />
 		</exec>
-		
+
 		<junit printsummary="yes" fork="yes" haltonfailure="yes">
 			<classpath>
 				<pathelement path="${classpath}" />
@@ -273,7 +273,7 @@
 			<formatter type="xml" />
 			<test name="org.irisa.genouest.logol.test.GrammarTest" todir="${res.dir}" outfile="LogolSelfTest" />
 		</junit>
-		
+
 	</target>
 
 	<target name="antlr" description="generate parser and lexer from grammar">
@@ -342,7 +342,7 @@
 
 		<replaceregexp file="${basedir}/tools/suffixSearch.rb"
 			match="&#34;vmatch" replace="&#34;${vmatch_path}vmatch" />
-		
+
 		<replaceregexp file="${basedir}/tools/cassiopeeSearch.rb"
 			match="DIR=&#34;&#34;" replace="DIR=&#34;${cassiopee_path}&#34;" />
 
@@ -354,7 +354,7 @@
 			<fileset dir="${basedir}/../logol-${version}"  excludes="doc/uml/**" />
 		</zip>
 	</target>
-	
+
 	<target name="dist_swi" depends="test_swi,archive" >
 		<echo message="Archive ../${archive.file} created."/>
 	</target>
@@ -363,7 +363,7 @@
 	</target>
 
     <target name="deploy" description="Deploy application">
-        <copy todir="${target.dir}" 
+        <copy todir="${target.dir}"
           preservelastmodified="true">
             <fileset dir="${basedir}">
                 <include name="**/*.*"/>
