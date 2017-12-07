@@ -857,7 +857,7 @@ public class GrammarTest {
 
 			Vector<String[]> result = new Vector<String[]>();
 			result.add(new String[] {"LogolVAR_1","4","7"});
-			result.add(new String[] {"LogolVAR_3","8","12"});
+			result.add(new String[] {"LogolVAR_3","8","13"});
 
 			execute("end.logol");
 
