@@ -1,0 +1,6 @@
+def:{
+morphism(foo,a,g)
+}
+mod1()==>"ccaccat",!("taa"|"tga"|"tag"):{#[2,2]}
+
+mod1()==*>SEQ1

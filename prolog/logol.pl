@@ -2438,7 +2438,7 @@ notexact_pos( InputPos, Motif , MinSize, MaxSize, Errors, OutPos) :- MinSize=<Ma
 %
 
 between(Min,Max,Value):-between(Min,Min,Max,Value).
-between(Min,Cur,Max,Value):-Cur<Max,(Value=Cur;Next is Cur + 1,between(Min,Next,Max,Value)).
+between(Min,Cur,Max,Value):-Cur=<Max,(Value=Cur;Next is Cur + 1,between(Min,Next,Max,Value)).
 
 
 %% notpred_pos(+Id:int,+InputPos:int,+Pred:goal,+MinSize:int,+MaxSize:int,-OutputPos:list)
@@ -2460,7 +2460,7 @@ between(Min,Cur,Max,Value):-Cur<Max,(Value=Cur;Next is Cur + 1,between(Min,Next,
 % Fix 1406
 % Call predicate. If match, return last argument e.g. position, else return 0.
 callpred(Pred,OutPos,Pos):- (Pred ,(Pred=..VarDef,nth0(OutPos,VarDef,Pos)));(Pos=0).
-notpred_pos(VarId,StartPos,Pred,Min,Max,Value):-random(Id),retractall(hasmatch(Id,_)),Pred=..VarDef,length(VarDef,Predlength),OutPos is Predlength - 1,PosMin is StartPos + Min, PosMax is StartPos + Max,!,between(StartPos,PosMax,Value),(callpred(Pred,OutPos,Pos) , ((\+hasmatch(Id,Pos) -> (assert(hasmatch(Id,Pos)));1=1),\+hasmatch(Id,Value),assert(hasmatch(Id,Value)))),Value>=PosMin.
+notpred_pos(VarId,StartPos,Pred,Min,Max,OutputPos):-random(Id),retractall(hasmatch(Id,_)),Pred=..VarDef,length(VarDef,Predlength),OutPos is Predlength - 1,PosMin is StartPos + Min, PosMax is StartPos + Max,!,between(StartPos,PosMax,Value),(callpred(Pred,OutPos,Pos) , ((\+hasmatch(Id,Pos) -> (assert(hasmatch(Id,Pos)));1=1),\+hasmatch(Id,Value),assert(hasmatch(Id,Value)))),Value>=PosMin,ValueLength is Value - StartPos,getCharsFromPosition(StartPos,ValueLength,FoundWord),length(FoundWord,FoundLength),FoundLength >= Min, FoundLength=<Max, OutputPos is StartPos+FoundLength.
 
 
 % Test predicate to use with predicate requiring a position relative predicate as parameter.

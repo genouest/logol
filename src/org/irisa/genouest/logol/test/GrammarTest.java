@@ -2350,6 +2350,52 @@ public class GrammarTest {
             }
         }
 
+		@Test
+        public void testEndOfStream1() {
+
+            init();
+
+            Vector<String[]> result = new Vector<String[]>();
+            result.add(new String[] {"LogolVAR_1","32","38"});
+			result.add(new String[] {"LogolVAR_2","39","40"});
+            execute("test.fasta","end_of_stream1.logol");
+
+            try {
+                checkResult(result,0);
+            } catch (ParserConfigurationException e) {
+                fail(e.getMessage());
+            } catch (SAXException e) {
+                fail(e.getMessage());
+            } catch (IOException e) {
+                fail(e.getMessage());
+            } catch (TransformerException e) {
+                fail(e.getMessage());
+            }
+        }
+
+		@Test
+        public void testEndOfStream2() {
+
+            init();
+
+            Vector<String[]> result = new Vector<String[]>();
+            result.add(new String[] {"LogolVAR_1","32","38"});
+			result.add(new String[] {"LogolVAR_2","39","40"});
+            execute("test.fasta","end_of_stream2.logol");
+
+            try {
+                checkNoMatch(result,0);
+            } catch (ParserConfigurationException e) {
+                fail(e.getMessage());
+            } catch (SAXException e) {
+                fail(e.getMessage());
+            } catch (IOException e) {
+                fail(e.getMessage());
+            } catch (TransformerException e) {
+                fail(e.getMessage());
+            }
+        }
+
    	 @Test
    	 public void testRubyCassiopee() {
 		try {
