@@ -10,7 +10,7 @@
             target.dir=/path_where_files_should_be_installed
 	 -->
 
-	<property name="version" value="1.7.7" />
+	<property name="version" value="1.7.8" />
 
 	<condition property="ruby_path" value="${env.RUBY_PATH}"
 		else="">
