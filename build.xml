@@ -83,7 +83,7 @@
 	<target name="compile" description="Compile src files" depends="clean,antlr">
 		<delete dir="${bin.dir}" />
 		<mkdir dir="${bin.dir}" />
-		<javac source="1.8" target="1.8" classpathref="mylibs" srcdir="${src.dir}"
+		<javac source="1.7" target="1.7" classpathref="mylibs" srcdir="${src.dir}"
 			destdir="${bin.dir}"
 			excludes="logol__.g,logol.tokens,logol.g,logol.stg,logol.tpl,log4j.properties">
 
