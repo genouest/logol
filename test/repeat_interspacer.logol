@@ -1,4 +1,4 @@
 def:{
 }
-mod1()==>"aaa",repeat("acgt" ,[0,30])+
+mod1()==>"aaa",repeat("acgt" ,[1,30])+[2,10]
 mod1()==*>SEQ1

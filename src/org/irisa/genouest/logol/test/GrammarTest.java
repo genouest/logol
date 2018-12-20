@@ -1111,7 +1111,7 @@ public class GrammarTest {
 
 			Vector<String[]> result = new Vector<String[]>();
 			result.add(new String[] {"LogolVAR_1","4","6"});
-			result.add(new String[] {"LogolVAR_2","7","14"});
+			// result.add(new String[] {"LogolVAR_2","7","14"});
 
 			execute("repeat_any.logol");
 
@@ -1136,7 +1136,7 @@ public class GrammarTest {
 
 			Vector<String[]> result = new Vector<String[]>();
 			result.add(new String[] {"LogolVAR_1","4","6"});
-			result.add(new String[] {"LogolVAR_2","7","14"});
+			result.add(new String[] {"LogolVAR_2","7","22"});
 
 
 			execute("repeat_interspacer.logol");
@@ -1230,6 +1230,30 @@ public class GrammarTest {
 			}
 
 	 }
+
+	 @Test
+	 public void testRepeat0(){
+			init();
+
+			Vector<String[]> result = new Vector<String[]>();
+			result.add(new String[] {"LogolVAR_1","4","6"});
+
+			execute("repeat0.logol");
+
+
+			try {
+				checkResult(result,0);
+			} catch (ParserConfigurationException e) {
+				fail(e.getMessage());
+			} catch (SAXException e) {
+				fail(e.getMessage());
+			} catch (IOException e) {
+				fail(e.getMessage());
+			} catch (TransformerException e) {
+				fail(e.getMessage());
+			}
+
+	 }	 
 
 	 @Test
 	 public void testRepeat2(){

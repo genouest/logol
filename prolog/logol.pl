@@ -296,6 +296,7 @@ anySpacer_pos(InputPos,OutPos,Pred,Spacer, Min, Max,CountSpacer, NumberSpacer):-
 repeatPredicate_pos(InputPos, Pred, N, AllowStartSpacer, MinStartSpacer, MaxStartSpacer, AllowIntermediateSpacer, MinSpacer, MaxSpacer, AllowOverlap, NumberSpacer, Errors, Info, Z) :- Pred=..VarDef,sublist(VarDef,Params,3,_,4),getKnownVariables(Params,InitParams),repeatPredicate_pos(InputPos, Pred, InitParams, 0, N, AllowStartSpacer, MinStartSpacer, MaxStartSpacer, AllowIntermediateSpacer, MinSpacer, MaxSpacer, AllowOverlap, [], NumberSpacer, [0,0], Errors, [], Info, Z).
 % sub predicate, do not call directly
 repeatPredicate_pos(InputPos, Pred, InitParams, Count, N, AllowStartSpacer, MinStartSpacer, MaxStartSpacer,AllowIntermediateSpacer, MinSpacer, MaxSpacer, AllowOverlap, PreviousMatch, NumberSpacer, ErrorCount, Errors, InfoList, Info, Z2) :-
+   (N>=0,Count=0,Z2=InputPos,Errors=ErrorCount,Info=InfoList,NumberSpacer=0);
    (N=0,Count>1,Z2=InputPos,Errors=ErrorCount,Info=InfoList,NumberSpacer=0);
    % check number of repeat
    (N>0,Count>0,Count=<N,Z2=InputPos,Errors=ErrorCount,Info=InfoList,NumberSpacer=0);
