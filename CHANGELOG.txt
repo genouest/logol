@@ -1,4 +1,5 @@
 History:
+1.7.9: 20/12/18 O. Sallou - Fix repeat lower bound, 0 was ignored
 1.7.8: 03/04/18 O. Sallou - Detect process execution failure (out of memory, etc.) and display error message
 1.7.7: 08/12/17 O. Sallou - Fix *not* and *spacer* contraints when reaching end of sequence (last characters)
 1.7.6: 07/12/17 O. Sallou - Fix endConstraint, was comparing end position + 1 instead of end position
